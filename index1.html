@@ -1,0 +1,237 @@
+<!-- 
+    0816 블록체인 특강 4일차
+    html 기본 베이스 틀 자동완성 명령어 doc 
+    HTML = HyperText Markup Language
+    웹페이지를 작성하는 문서
+    구조적으로 이루어져있음.
+    논리x
+
+    Tag, Tag 이름 -> hteml, head, meta, body, div, ... 단순하게 이름이라고 생각하면됨
+    <> -> 여는 태그 </> -> 닫는 태그 ==> 여는 태그가 있으면 닫는 태그가 있어야한다.
+    Element -> Javascript 들어가서 다시 (지금은 신경쓰지 말기)
+    여는 태그와 닫는 태그 사이에 자식 태그들이 있다.
+    자식 태그 -> 부모 태그
+    -->
+<html lang="ko">
+  <!-- html 태그란 HTML 파일의 시작을 의미, 무조건적인 것
+        여는 태그 안에 들어가 있는 것 = 속성
+        속성 : Tag에 대한 설정, lang
+        lang -> 무슨 언어냐에 대한 설정, en:영어, ko:한글
+     -->
+  <head>
+    <!-- head : 브라우저에 대한 여러가지 정보들을 전달
+        보통은 페이지 상에서 보이지 않음 -->
+    <!-- Tag 중에 바로 열고 닫기가 가능함, <*** />
+        보통 자식이 없을 때 사용 => meta, img, input 등
+     -->
+    <meta charset="UTF-8" />
+    <!--  
+        메타데이터, 간단히 말하면 기본 정보를 전달한다.
+        charset : 언어가 어떤 포멧, 형식인지 UTF-8 유니코드 중 하나
+        UTF-8 : Javascript 할때 다시 배울 것
+     -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- 
+        http-equiv : 웹 사이트가 어떤 호환성을 갖고 있는지, Javascript를 어디까지 사용할 수 있는지
+        content : 어떤 정보인지에 대한 내용 -> IE=edge << InternetExplorer 의 버전이 edge 라는 뜻
+
+     -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 
+        name : 어떤 설정인지, viewport라는 이름을 갖고 있다. -> viewport : 화면에 대한 내용, 카메라라고 생각하면됨. 어느정도의 너비를 갖는지, 줌(확대)이 어떻게 되어있는지 등
+        width=device-width : 웹페이지의 가로 너비를 브라우저 또는 스마트폰의 너비에 맞추겠다는 뜻
+        initial-scale : 기본 확대가 1.0배 라는 뜻
+        이외에도 maximum-scale, minimum-scale 존재 : 최대, 최소
+     -->
+    <title>kawonlee</title>
+    <!-- 
+        title : 웹 페이지 이름, 사이트 이름
+        link, script, style // 코드는 위에서 부터 내려가기 때문에 head부분에 정의
+     -->
+  </head>
+  <body>
+    <div>
+      <p>줄바꿈</p>
+      <!-- p = 단락, paragraph 단어의 약자, 블록화 되어 있다. 내용이 너비를 넘으면 알아서 줄바꿈 한다. -->
+      <br />
+      br은 줄바꿈이다
+      <!-- br : 줄바꿈, 수동으로 엔터를 친다고 생각하면 된다. -->
+      <span>
+        <!--
+         p와 거의 유사함
+        인라인 속성을 갖고 있다. 블록화와 대비된다.
+        p안에 적기도 한다. 나중에 다시 설명해주실 것
+     -->
+      </span>
+      <pre>
+        <!-- p나 span과 같다.
+        결정적 차이 : 쓴 그대로 나옴
+         -->
+      </pre>
+      <h1>대제목</h1>
+      <!-- h1이 제일 큰 제목이다(대제목), 이후 숫자가 늘어나며 6번째 제목까지 있을 수 있다. -->
+      <h2>제목</h2>
+      <h3>제목</h3>
+      <h4>제목</h4>
+      <h5>제목</h5>
+      <h6>제목</h6>
+    </div>
+    <div>
+      <img src="./lion.png" alt="라이언" />
+      <img
+        src="http://monthly.chosun.com/up_fd/Mdaily/2017-09/bimg_thumb/2017042000056_0.jpg"
+        alt="라이언2"
+      />
+      <!-- image
+            srt : source 즉 이미지의 주소, 파일명 등을 넣을 수 있음
+            ./ = 현재위치를 뜻함
+            alt : 이미지를 정상적으로 받지 못했을 때 또는 경고나 이름
+            이미지포멧 : jpg, bmp, png
+            base64 : 텍스트로 이미지를 볼 수 있는 것(뒤에 이미지포멧이 안적혀 있는 경우)
+        -->
+    </div>
+    <div>
+      <p>
+        <strong>굵은 글씨 강조, 긴급한 내용 같은 곳에 쓰임 ex) 알람</strong>
+        채팅을 쳤는데, 공지를 올림 : 긴급사항, 알림을 strong 으로 강조
+        <b>그냥 굵은 글씨, 나중에 css에서 알 수 있다.</b>
+        <del>
+          ex) 삭제한 내용, 게시판에서 글을 삭제 그 글을 관리자는 확인가능해야함.
+        </del>
+        <ins>
+          insert 입력한 내용, 늘어난 내용 ex) 게시판에 글을 작성함, 신규 작성글
+          등으로 활용하여 쓸 수 있음 어떤 내용을 수정했을 때
+        </ins>
+        2의 제곱 2<sub>2</sub> 영어<sub>English</sub>
+        <!-- 아래 첨자, 영어 단어 -->
+        2<sup>2</sup> 강아지<sup>동물</sup>
+        <!-- 윗 첨자, 영어 단어 -->
+        <i>둘 다 기울었음, 이름이나 제목 같은 거, 가져온 말들(인용) ex) 명언</i>
+        <em>둘 다 기울었음, 강조 like strong</em>
+        <!-- strong 과 b의 관계와 비슷함(사용 용도의 차이)
+         -->
+        <!-- p태그 = 영역 -> p는 부모, p안에 있는 애들은 자식 -->
+      </p>
+    </div>
+    <div>
+      style : 속성, 그 태그의 크기, 외곽선, 위치, 배경, 등을 설정한다. 기초적인
+      방법 웹페이지가 처음은 html 파일로 주고받았음. 점점 발전하며 html파일이
+      너무 커져서 보기가 어려워짐 그래서 나온 것이 CSS 파일, 즉 Casecading Style
+      Sheet로 HTML 파일 외부로 빼서 불러올 수 있게 함(보기도 편해짐=양이 줄어서)
+      이 방식은 나중에 배움
+      <div style="width: 1000px">
+        <p>
+          너비나 높이나 숫자를 이용한 수치들에 대한 단위 : px, %, em, rem, vm,
+          vh
+        </p>
+        <p>px : 픽셀, 한칸 한칸</p>
+        <p>% : 부모를 기준으로 한 %, 100% = 부모의 너비</p>
+        <p>em : 글씨 크기를 기준으로 한다. 부모의 글씨 크기</p>
+        <p>
+          rem : 글씨 크기를 기준으로 한다. html의 글씨 크기, 모바일,
+          PC한번에만들 때 많이 사용한다.
+        </p>
+        <div>
+          ex) 글씨 크기가 16px, 그럼 1em, 1rem은 16px 글씨 크기가 32px, 1em =
+          1rem = 32px, -> 0.5rem = 16px
+        </div>
+        <p>
+          vw,vh : viewport, 브라우저나 스마트폰의 크기를 기준으로 %를 따짐 100vw
+          = 화면의 너비, 100vh 화면의 높이
+        </p>
+      </div>
+    </div>
+    <div>
+      <div style="width: 1000px">
+        <div style="max-width: 1000px; min-width: 100px">
+          width : 영역의 너비 max-width : 영역의 최대 너비 min-width : 영역의
+          최소 너비 %, vw, vh은 기준이 있고 그 기준의 비율로 너비를 설정
+          어떤내용을 넣었는데, 최소 100px은 있어야 제대로 뜬다. -> min-width
+          어떤내용을 넣었는데, 너무 크면 안된다. 1000px 이상 넘어가면 안된다.
+          ->max-width
+        </div>
+      </div>
+    </div>
+    <div style="height: 100px">
+      height : 높이 max-height : 영역의 최대 높이 min-height : 영역의 최소 높이
+      이미지 조절할 때 사용 이미지 조절할 때, 이미지에 대한 style을 할 때 다시
+      설명해주실 예정
+    </div>
+    <div
+      style="
+        width: 100px;
+        height: 100px;
+        background-color: rgb(200, 200, 200);
+        padding: 10px;
+        box-sizing: border-box;
+      "
+    >
+      <!-- 
+        padding : 내부 여백, 내부에 얼마나 빈공간을 줄 것인지 설정하는 코드
+    -->
+      <div style="height: 100%; background-color: rgb(255, 0, 0)"></div>
+    </div>
+
+    -------------------------------------------------------------------------------------
+
+    <div style="width: 100px; height: 100px; background-color: rgb(0, 0, 0)">
+      <!-- 
+        margin : 외부 여백
+        자식의 너비는 설정하지 않으면 무조건 부모를 따라감 -> 즉 부모의 너비가 자식의 너비가 됨
+        높이는 설정하지 않으면 자식의 높이를 따라감 -> 자식이 없으면 높이는 0px
+        자식의 너비가 없고 margin(외부 여백)이 있으면, 부모의 너비에서 외부 여백을 제외한 너비를 갖게된다.
+        즉, 설정한 스타일이 있으면 그걸 우선 시 해서 적용한다.
+    -->
+      <div
+        style="height: 100%; background-color: rgb(255, 0, 0); margin: 10px"
+      ></div>
+    </div>
+
+    <div
+      style="
+        width: 100px;
+        height: 150px;
+        background-color: rgb(0, 0, 0);
+        padding-top: 30px;
+        margin-top: 20px;
+      "
+    >
+      <div
+        style="
+          width: 100%;
+          height: 100px;
+          background-color: rgb(255, 0, 0);
+          margin-left: 50px;
+        "
+      ></div>
+    </div>
+
+    <div
+      style="
+        width: 100px;
+        height: 150px;
+        background-color: rgb(0, 150, 100);
+        position: relative;
+        left: 50%;
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+      "
+    >
+      <div
+        style="
+          width: 100%;
+          height: 100px;
+          background-color: rgb(150, 100, 200);
+          margin-left: 50px;
+        "
+      ></div>
+    </div>
+    <!-- 여백 관련된 내용 집에서 따로 공부해볼 것
+        정리할 때 notion 사용하기!
+    -->
+  </body>
+  <!-- 
+    웹페이지의 내용물
+   -->
+  <!-- 영역, div -->
+</html>
