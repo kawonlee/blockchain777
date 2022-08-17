@@ -1,0 +1,295 @@
+<!--
+    HTML -> HyperText Makeup Language
+    웹페이지를 작성하는 문서
+    구조적으로 이루어져있음
+    논리X
+    Ctrl + / : 주석처리
+    Tag, Tag 이름 -> html, head, meta, body, div, ... 
+    <***> -> 여는 태그
+    </***> -> 닫는 태그
+     여는 태그가 존재한다면 닫는태그도 반드시 존재해야함
+    Element << JavaScript 에서 다시 언급할 예정
+    여는 태그와 닫는 태그 사이에 자식 태그들이 존재 할 수 있다
+    자식 태그 -> 부모 태그
+-->
+<!--
+    색상의 큰 의미는 없다
+    같은 색상인지만 확인해라
+-->
+<html lang="en">
+  <!-- html 태그란 ? html 파일의 시작 
+    속성 : Tag에 대한 설정 (ex lang="en")
+    lang -> 무슨 언어로 설정할 것인가 -> en 영어, ko 한글 
+-->
+  <head>
+    <!-- head : 브라우저에 여러가지 정보들을 전달
+        보통은 페이상에서는 보이지 않는다
+    -->
+    <!-- Tag 중에 바로 닫기, <*** />
+        자식 태그가 존재 하지 않을떄 -> meta, img, input ... 
+    -->
+    <meta charset="UTF-8" />
+    <!--
+        메타데이터, 간단히 정리하자면 기본 정보를 전달한다
+        charset : 언어가 어떤 포맷이냐 ? 형식이냐 ? UTF-8 유니코드 중 하나
+        UTF-8 : JavaScript때 다시 할 예정
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--
+        http-equiv : 웹사이트가 어떤 호환성을 가지고 있는가 ? JavaScript를 어디까지 사용 할 수 있는가?
+        content : 어떤 정보인지에 대한 내용 -? IE=edge << Internet Explorer 의 버전이 edge
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+        name : 어떤 설정인가 ? viewport라는 이름을 가지고 있는다 << 화면에 대한 내용
+        viewport : 카메라, 어느정도의 너비를 갖는지, 줌(확대)이 어떻게 되어 있는지
+        width=device-width << 웹페이지의 가로 너비를 브라우저 or 스마트폰의 너비에 맞추겠다.
+        initial-scale=1.0  << 기본 확대가 1.0배다
+        maximum-scale, minimum << 최대/최소
+    -->
+    <title>Document</title>
+    <!--
+        title : 웹페이지의 제목, 이름, 사이트 이름
+    -->
+    <!--
+        link, script, style
+    -->
+  </head>
+  <body>
+    <!--22.08.17-->
+    <!-- 
+      ol과 ul은 리스트를 작성한다.
+      리스트의 부모 태그
+      li는 자식 태그
+      리스트 자식 태그 안에 또 다른 자식 리스트 태그를 넣을 수 있다.
+    -->
+    <ol type="1" start="4" reversed>
+      <!-- 숫자형식으로 된 리스트 ordered list-->
+      <li>첫번째</li>
+      <li>두번째</li>
+      <li>두번째</li>
+      <li>두번째</li>
+      <li>두번째</li>
+      <li>두번째</li>
+    </ol>
+    <ul type="dics">
+      <!-- 숫자 없이 동그라미, 네모 등 으로 된 리스트 unordered list -->
+      <li>첫번째</li>
+      <li>두번째</li>
+      <li>두번째</li>
+    </ul>
+
+    <div>
+      <!--
+        display란 ? 영역을 어떻게 출력할지 설정하는 명령어
+        block, inline, inline-block, float, flex, none, ... 등 존재 한다. 
+        인라인, 블록이란
+        블록은 너비를 전부 갖는다. 욕심쟁이
+        옆 공간을 모두 차지 한다.
+      -->
+      <div style="width:100px; height:100px; background-color:black;"></div>
+      <div style="width:100px; height:100px; background-color:blue;"></div>
+      <!-- 
+        inline, 인라인은 자기 옆을 허락 하는 css 명령어
+        연속적임. 자식이 없으면 안보일 수 있음
+        인라인은 필요한 만큼만 가진다. 그래서 옆을 차지하지 않고 같은 인라인이면 연속적으로 출력된다.
+        inline-block은 두 설정을 모두 갖고 있다.
+        연속적이면서도 설정된 크기를 가질 수 있다
+      -->
+      <div style="display :inline-block; width:100px; height:100px; background-color:red;"></div>
+      <div style="display :inline-block; width:100px; height:100px; background-color:aqua;"></div>
+
+      <!--
+        float은 텍스트화
+        글 막 적을때 왼쪽, 오른쪽 정렬
+        정렬을 위해 사용
+        이후 배울 css 스타일 속성들과 충돌하는 경우가 발생 할 수 있다.
+        따라서, 위치를 설정하는데 어려움이 생길 수 있다.
+      -->
+
+      <div style="float : left; width:100px; height:100px; background-color:violet;"></div>
+      <div style="float : left; width:100px; height:100px; background-color:pink;"></div>
+
+      <div style="float : right; width:100px; height:100px; background-color:brown;"></div>
+      <div style="float : right; width:100px; height:100px; background-color:green;"></div>
+
+    </div>
+
+
+
+
+    <!-- 영역, div -->
+    <div>
+        <h1>h1</h1>        
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <h6>h6</h6>
+
+        <notion><b>h1이 제일 큰 제목이다.</b> 이후 숫자가 늘어나면 6번째 제목 까지 있을 수 있다</notion>
+    </div>
+    <div>
+      <h3>p 태그 </h3>
+        <p>
+          단락, paragraph 단어의 약자, 블록화되어 있다 내용이 너비를 넘으면
+          웹페이지상에서 자동으로 줄바꿈이 일어난다.
+        </p>
+      <h3>br태그</h3>
+        <p>
+          br은 줄바꿈, 엔터 <br><br>
+        </p>
+      <h3>span, pre 태그</h3>
+      <h4>span 태그</h4>
+        <span>p안에 적기도 함 <br>
+            p랑 거의 유사하다 인라인 속성이 가지고 있다. 블록화와 대비된다 ? 나중에
+            다시 언급 할 예정
+        </span><br>
+      <h4>pre 태그</h4>
+        <pre>
+            p나 span이나 같다.
+            결정적인 차이가 하나 있다.
+            얘는 쓴데로 나온다
+        </pre> 
+    </div>
+    <div>
+    <h3>img 태그</h3>
+      <img src="./카카오1.jpg" alt="카카오" />
+        <p>          
+            src = source, 이미지의 주소, 파일명 <br>
+            alt = img를 정상적으로 받지 못했을때 뜨는 경고? 이름? <br>
+            ./ -> 현재 위치를 뜻 한다 <br>
+            이미지 포맷 : jpg, png, bmp <br>
+            base64 -> 요건 텍스트로 이미지를 볼 수 있다? <br><br>
+        </p>
+    </div>
+    <div>
+      <p>
+        <h3>글씨 강조 관련 태그 strong, b</h3>
+        <h4>strong태그</h4>
+          <div style = "float : right; width : 10px; height: 10px; background-color: red;"></div>
+          <strong>굵은 글씨 강조, 긴급한 내용, 알람?</strong>
+          채팅을 쳤는데, 공지를 올렸다 : 긴급 사항, 알람을 strong <br> <br>
+        <h4>b태그</h4>
+          <b>그냥 굵은 글씨, 나중에 css에서 알 수 있다</b><br>
+          <br><br>
+        <h3>del 태그</h3>
+          <del>
+            delete 삭제한 내용, 게시판에서 글을 삭제 했어 그 글을 관리자는 확인
+            가능해야함
+          </del> <br><br>
+        <h3>ins 태그</h3>
+          <ins>
+            insert 입력한 내용, 늘어난 내용 게시판 글을 적었다. 신규 작성글 수정한
+            글
+          </ins> <br><br>
+        <h3>윗첨자, 아래 첨자 태그 sup, sub</h3>
+        <h4>아래첨자 태그 sub</h4>
+          1<sub>one  <br><br>아래 첨자 영어단어</sub>
+          <h4>윗첨자 태그 sup</h4>
+          2<sup>2 윗첨자 &nbsp;</sup> 
+          <br><br>
+        <h3>글씨 기울림 태그 i, em</h3>
+        <h4>i 태그</h4>
+          <i>둘다 기울었다, 이름이나 제목 같은거에 사용하거나 가져온 말들, 인용</i> <br><br>
+        <h4>em 태그</h4>
+          <em>둘다 기울었다, 강조 = strong </em> <br><br><br><br>
+          <!-- <notion>strong, b, del, ins, sub, sup, i, em</notion> -->
+      </p>
+    </div>
+    <div>
+        <h3>Style 속성</h3>
+            style : 속성, 해당 태그의 크기, 외곽선, 위치, 배경 등을 설정한다. 기초적인
+            방법 웹페이지 처음은 html 파일로 주고 받았다 html 파일이 너무 커졌다. 이에
+            보기가 어려워졌다 CSS 파일, Cascading Style Sheets로 HTML 파일 외부로 뺌.
+            요 방식은 나중에
+            <br><br><br>
+    <div>
+        <h3>width</h3>
+            <p>
+              너비나 높이, 숫자를 이용한 수치들에 대한 단위 : px, %, em, rem, vw, vh
+            </p>
+            <h4>width 의 단위</h4>
+                <p>px : 그냥 픽셀, 한칸 한칸을 의미한다</p>
+                <p>% : 부모를 기준으로 한 %, 100% = 부모의 너비</p>
+                <p>em = 글씨 크기를 기준으로 한다, 부모의 글씨 크기</p>
+                <p>
+                  rem = 글씨 크기를 기준으로 한다, html의 글씨 크기, 모바일, PC를 한번에
+                  만들때 많이 사용한다
+                </p>
+        <div>
+            ex) 글씨 크기가 16px, 그럼 1em, 1rem은 16px 글씨 크기가 32px, 1rem =
+            1em = 32px, 0.5rem = 16px
+        </div>
+        <p>
+          vw, vh : viewport, 브라우저의 크기나 스마트폰의 크기를 기준으로 %
+          100vw = 화면의 너비, 100vh = 화면의 높이
+        </p>
+        <!-- px, %, em, rem, vw(viewport width), vh(viewport height) -->
+      </div>
+    </div>
+    <div>
+      <div>
+        <div style="max-width: 1000px; min-width: 100px">
+          width : 영역의 너비 <br />
+          max-width : 영역의 최대 너비 <br />
+          min-width : 영역의 최소 너비 <br />
+          %, vw, vh은 기준이 있고 그 기준의 비율로 너비를 설정 한다. <br />
+          어떤 내용을 넣었는데, 최소 100px은 있어야한다면 ? min-width를 사용
+          <br />
+          어떤 내용을 넣었는데, 너무 크면 안된다면 ? 즉, 1000px를 넘기면
+          안된다면 : max-width를 사용<br /><br />
+        </div>
+      </div>
+      <div style="height: 100px">
+        height : 영역의 높이 <br />
+        max-height : 영역의 최대 높이 <br />
+        min-height : 영역의 최소 높이 <br />
+        이미지를 조절 할 때, 이미지에 대한 style을 할 때 다시 언급 할 예정<br />
+      </div>
+      <div
+        style="
+          width: 100px;
+          height: 100px;
+          background-color: rgb(200, 200, 200);
+          padding: 10px;
+          box-sizing: border-box;
+        "
+      >
+        <!--
+        padding : 내부 영역의 여백 -> 내부에 얼마나 빈공간을 줄건지
+      -->
+        <div style="height: 100%; background-color: rgb(255, 0, 0)"></div>
+      </div>
+    </div>
+    <div
+        style="
+          width: 100px;
+          height: 100px;
+          background-color: rgb(0, 0, 0);
+        "
+      >
+        <!--
+          margin : 외부 여백
+          너비는 설정 하지 않으면 무조건 부모를 따라 간다. 즉, 부모의 너비가 자식의 너비가 된다.
+          높이는 설정 하지 않으면 자식의 높이를 따라 간다. 자식이 없으면 0px로 설정
+          자식의 너비가 없어 그리고 margin(외부 여백)이 존재하면
+          -> 부모의 너비에서 외부여백을 제외한 너비가 설정된다
+          즉, 설정한 스타일이 있으면 그걸 우선적으로 설정된다.
+        -->
+        <div style="height: 100%; background-color: rgb(255, 0, 0); margin: 10px;"></div>
+      </div>
+    </div>
+    <p>
+        width 설정 값이 없다 ? 부모의 너비를 받아오는데 사용자가 margin 설정값을 10px로 설정했으니<br>
+        margin(외부영역)을 우선적으로 만들어줘야하기에 부모의 너비가 아닌 설정값으로 적용 된다.
+    </p>
+    <p>
+        너비는 부모의 너비를 따라 받는다.
+        높이는 자식의 높이를 따라 간다. 즉, 설정을 하지 않으면 0px로 설정되기에 조심해야한다.
+    </p>
+  </body>
+  <!--
+    웹페이지의 내용물
+  -->
+</html>
