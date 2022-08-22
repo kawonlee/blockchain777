@@ -1,0 +1,181 @@
+          <colgroup span="2" style="width: 100px"></colgroup>
+          <col style="width: 100px" />
+          <col style="width: 100px" />
+          <col style="width: 100px" />
+          <col style="width: 100px" />
+          <col style="width: 100px" />
+          <col style="width: 100px" />
+
+
+  <tr>
+        <td bgcolor="aquamarine" style="border: 1px solid black">생년월일</td>
+        <td colspan="3" style="border: 1px solid black">1996년 9월 15일</td>
+        <td bgcolor="aquamarine" style="border: 1px solid black">나이(만)</td>
+        <td style="border: 1px solid black">만 26세</td>
+      </tr>
+      <tr>
+        <td bgcolor="aquamarine" style="border: 1px solid black">휴대폰</td>
+        <td style="border: 1px solid black">010-2401-4634</td>
+        <td bgcolor="aquamarine" style="border: 1px solid black">전화번호</td>
+        <td colspan="3" style="border: 1px solid black">031-967-0054</td>
+      </tr>
+      <tr>
+        <td bgcolor="aquamarine" style="border: 1px solid black">이메일</td>
+        <td colspan="5" style="border: 1px solid black">
+          shadow4634@naver.com
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor="aquamarine" style="border: 1px solid black">주소</td>
+        <td colspan="5" style="border: 1px solid black">
+          서울시 광진구 구의동78-3
+        </td>
+      </tr>
+    </div>
+      <tr>
+        <td bgcolor="aquamarine" colspan="2" style="border: 1px solid black">
+          보훈대상자
+        </td>
+        <td colspan="2" style="border: 1px solid black">해당 □ 해당없음 ■</td>
+        <td bgcolor="aquamarine" colspan="2" style="border: 1px solid black">
+          장애여부
+        </td>
+        <td colspan="2" style="border: 1px solid black">해당 □ 해당없음 ■</td>
+      </tr>
+      <div>
+        <tr>
+          <td bgcolor="aquamarine" colspan="8" style="border: 1px solid black">
+            학력사항 (최종학력, 을지대학교 졸업)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="border: 1px solid black">재학기간</td>
+          <td colspan="2" style="border: 1px solid black">학교명 및 전공</td>
+          <td style="border: 1px solid black">학점</td>
+          <td style="border: 1px solid black">구분</td>
+          <td colspan="2" style="border: 1px solid black">소재지</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="border: 1px solid black">2015.03~2021.02</td>
+          <td colspan="2" style="border: 1px solid black">
+            을지대학교 의료it마케팅학과
+          </td>
+          <td style="border: 1px solid black">3.3</td>
+          <td style="border: 1px solid black">주간</td>
+          <td colspan="2" style="border: 1px solid black">성남</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="border: 1px solid black">2012.03~2015.02</td>
+          <td colspan="2" style="border: 1px solid black">화수 고등학교</td>
+          <td style="border: 1px solid black"></td>
+          <td style="border: 1px solid black">인문계</td>
+          <td colspan="2" style="border: 1px solid black">고양</td>
+        </tr>
+      </div>
+      <div>
+        <tr>
+          <td bgcolor="aquamarine" colspan="8" style="border: 1px solid black">
+            자격증
+          </td>
+        </tr>
+        <td colspan="2" style="border: 1px solid black">취득일</td>
+        <td colspan="2" style="border: 1px solid black">자격증/면허증</td>
+        <td colspan="2" style="border: 1px solid black">등급</td>
+        <td colspan="2" style="border: 1px solid black">발행처</td>
+        <tr>
+          <td colspan="2" style="border: 1px solid black">2016.08</td>
+          <td colspan="2" style="border: 1px solid black">운전면허증</td>
+          <td colspan="2" style="border: 1px solid black">2종 보통</td>
+          <td colspan="2" style="border: 1px solid black">도로교통공단</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="border: 1px solid black">-</td>
+          <td colspan="2" style="border: 1px solid black">-</td>
+          <td colspan="2" style="border: 1px solid black">-</td>
+          <td colspan="2" style="border: 1px solid black">-</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="border: 1px solid black">-</td>
+          <td colspan="2" style="border: 1px solid black">-</td>
+          <td colspan="2" style="border: 1px solid black">-</td>
+          <td colspan="2" style="border: 1px solid black">-</td>
+        </tr>
+      </div>
+      <div>
+        <tr>
+          <td bgcolor="aquamarine" colspan="8" style="border: 1px solid black">
+            주요활동 및 경력
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="border: 1px solid black">기간</td>
+          <td colspan="2" style="border: 1px solid black">활동내용</td>
+          <td colspan="2" style="border: 1px solid black">활동구분</td>
+          <td colspan="2" style="border: 1px solid black">기관명/업체명</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="border: 1px solid black">2021.04~2022.04</td>
+          <td colspan="2" style="border: 1px solid black">
+            솔루션 유지보수, 기술지원 및 장애처리
+          </td>
+          <td colspan="2" style="border: 1px solid black">근무</td>
+          <td colspan="2" style="border: 1px solid black">이글루코퍼레이션</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="border: 1px solid black">2018.06~2018.12</td>
+          <td colspan="2" style="border: 1px solid black">주방 및 서빙</td>
+          <td colspan="2" style="border: 1px solid black">아르바이트</td>
+          <td colspan="2" style="border: 1px solid black">바른치킨</td>
+        </tr>
+      </div>
+      <div>
+        <tr>
+          <td bgcolor="aquamarine" colspan="8" style="border: 1px solid black">
+            능력사항
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="3" style="border: 1px solid black">OA능력</td>
+          <td style="border: 1px solid black">워드/한글</td>
+          <td colspan="2" style="border: 1px solid black">상 □ 중 ■ 하 □</td>
+          <td rowspan="3" style="border: 1px solid black">어학능력</td>
+          <td style="border: 1px solid black">영어</td>
+          <td colspan="2" style="border: 1px solid black">상 □ 중 □ 하 ■</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black">엑셀</td>
+          <td colspan="2" style="border: 1px solid black">상 □ 중 ■ 하 □</td>
+          <td style="border: 1px solid black">일본어</td>
+          <td colspan="2" style="border: 1px solid black">상 □ 중 □ 하 ■</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black">파워포인트</td>
+          <td colspan="2" style="border: 1px solid black">상 □ 중 ■ 하 □</td>
+          <td style="border: 1px solid black">기타()</td>
+          <td colspan="2" style="border: 1px solid black">상 □ 중 □ 하 ■</td>
+        </tr>
+      </div>
+    </tbody>
+    <div style="text-align: right; margin: 15px; padding: 25px">
+      위에 기재한 사실은 사실과 틀림이 없습니다.
+      <br />
+      <b>2022년 8월 22일</b>
+      <br />
+      <b>성명 : 이 가 원 (인)</b>
+    </div>
+
+
+ <tr>
+        <td style="border: 1px solid black; background-color: cadetblue">
+          성 명
+        </td>
+        <td style="border: 1px solid black">이가원</td>
+        <td style="border: 1px solid black; background-color: cadetblue">
+          영 어
+        </td>
+        <td style="border: 1px solid black">kawon lee</td>
+        <td style="border: 1px solid black; background-color: cadetblue">
+          한 문
+        </td>
+        <td style="border: 1px solid black">李嘉媛</td>
+      </tr>

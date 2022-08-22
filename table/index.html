@@ -1,0 +1,94 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!--
+         index.html 이라고 파일을 만드는 이유는 서버에서 사용하는 규칙이기 때문이다.
+    -->
+    <table style="border-collapse: collapse; text-align: center">
+      <!--
+             테이블 표 사이에 간격 없애는 코드
+             cellspacing, cellpadding << 사용 권장하지 않음
+             border-collapse - seperate(분해), collapse(병합)
+         -->
+      <!-- 표를 출력하는 부모 태그 -->
+      <caption>
+        <!-- 테이블 이름을 기재할 때 사용하는 규칙이라고 보면 된다. -->
+        테이블 이름
+      </caption>
+      <col style="width: 50px" />
+      <col style="width: 150px" />
+      <col style="width: 50px" />
+      <col style="width: 50px" />
+      <colgroup span="2" style="width: 80px"></colgroup>
+      <!--
+         column의 줄임말로 열=세로줄
+         col은 테이블의 열의 스타일을 공통적으로 정의한다.
+         단 하나의 열씩 정의해야 한다
+         예시에선 4개의 열이 존재하므로 4개의 col을 정의했다. 
+         column의 스타일을 한번에 여러 열을 적용하기 위해 사용하는 것이 colgroup이다.
+         span 속성을 이용해 몇 개의 연속된 열의 스타일을 적용할지 설정한다.
+         코드가 적용될 때는 위에서부터 순차적으로 적용된다.
+    -->
+      <thead>
+        <!-- thead : table head, 테이블의 제일 위 이름 -->
+        <tr>
+          <!-- tr은 table의 row, 행이다.(가로줄임) -->
+          <th style="border: 1px solid black">
+            <!-- th는 table head의 아이템(셀)이다. -->
+            번호
+          </th>
+          <th style="border: 1px solid black">이름</th>
+          <th style="border: 1px solid black">나이</th>
+          <th style="border: 1px solid black">성별</th>
+          <th style="border: 1px solid black">국적</th>
+          <th style="border: 1px solid black">출석</th>
+          <th style="border: 1px solid black">마스크 유무</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 테이블의 목록(내용) -->
+        <tr>
+          <td style="border: 1px solid black">
+            <!-- 테이블의 내용을 담은 셀이다. table data의 약자 -->
+            1
+          </td>
+          <td style="border: 1px solid black">이가원</td>
+          <td style="border: 1px solid black">27</td>
+          <td style="border: 1px solid black">여자</td>
+          <td style="border: 1px solid black">한국</td>
+          <td style="border: 1px solid black">O</td>
+          <td rowspan="2" style="border: 1px solid black">O</td>
+          <!-- rowspan : 한번에 세로 줄을 합친다. -->
+        </tr>
+        <tr>
+          <td style="border: 1px solid black">2</td>
+          <td style="border: 1px solid black">김성진</td>
+          <td style="border: 1px solid black">27</td>
+          <td style="border: 1px solid black">남자</td>
+          <td style="border: 1px solid black">한국</td>
+          <td style="border: 1px solid black">O</td>
+          <!--
+            border 값은 외곽선을 설정한다.
+            순서는 -> 굵기, 선형, 색상순으로 정의한다.
+            solid는 그냥 선이다. -->
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2" style="border: 1px solid black">총원</td>
+          <td style="border: 1px solid black">2</td>
+          <td colspan="2" style="border: 1px solid black">출석</td>
+          <td style="border: 1px solid black">2</td>
+          <!-- colspan : 한번에 가로 줄을 합친다. -->
+        </tr>
+      </tfoot>
+    </table>
+    <!-- div = divide의 약자 -->
+  </body>
+</html>
