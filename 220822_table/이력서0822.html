@@ -4,74 +4,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>이력서</title>
+    <style>
+      th,
+      td {
+        border: 1px solid darkslategrey;
+      }
+    </style>
   </head>
   <body>
-    <div>
-      <table align="center" style="border-collapse: collapse">
-        <caption style="text-align: center; font-weight: bold; font-size: 30px; margin-bottom: 30px;">
-          이 력 서
-        </caption>
-        <div>
-         <!-- <tr colspan="2" rowspan="6" style="border: 1px solid black">
-            <td>
-              <img 
-                style="
-                  width: 130px;
-                  height: 170px;
-                  border: 2px outset black;
-                  padding: 7px;
-                  margin-right: 20px;
-                "
-                src="data:image/jpeg;base64,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"
-                alt="사진"
-              />
-            </td>
-          </tr>
-        </div>-->
-        <div>
-          <col style="width: 100px" />
-          <col style="width: 150px" />
-          <col style="width: 100px" />
-          <col style="width: 150px" />
-          <col style="width: 100px" />
-          <col style="width: 100px" />
-          
-          <tr>
-            <td style="border: 1px solid black; background-color: cadetblue">
-              성 명
-            </td>
-            <td style="border: 1px solid black">이가원</td>
-            <td style="border: 1px solid black; background-color: cadetblue">
-              영 어
-            </td>
-            <td style="border: 1px solid black">kawon lee</td>
-            <td style="border: 1px solid black; background-color: cadetblue">
-              한 문
-            </td>
-            <td style="border: 1px solid black">李嘉媛</td>
-          </tr>
-          <tr>
-            <td style="border: 1px solid black; background-color: cadetblue;">
-              생년월일
-            </td>
-            <td colspan="3" style="border: 1px solid black">1996년 9월 15일</td>
-            <td style="border: 1px solid black; background-color: cadetblue;">
-              나이(만)
-            </td>
-            <td style="border: 1px solid black">만 26세</td>
-          </tr>
-          <tr>
-            <td style="border: 1px solid black; background-color:cadetblue">휴대폰</td>
-            <td colspan="2" style="border: 1px solid black;">010-2401-4634</td>
-            <td style="border: 1px solid black; background-color:cadetblue">전화번호</td>
-            <td colspan="2" style="border: 1px solid black;">031-967-0054</td>
-          </tr>
-           <tr>
-            <td style="border: 1px solid black; background-color:cadetblue">이메일</td>
-            <td colspan="5" style="border: 1px solid black;">shadow4634@naver.com</td>
-          </tr>
-        </div>
-      </table>
+    <div style="width: 1000px; margin: auto">
+      <div style="width: 100px; margin: auto"><h2>이 력 서</h2></div>
+      <div></div>
     </div>
   </body>
 </html>
