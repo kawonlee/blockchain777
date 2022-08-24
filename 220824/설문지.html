@@ -1,0 +1,189 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>리그오브레전드 설문 조사</title>
+    <style>
+      * {
+        margin: 10px;
+        box-sizing: border-box;
+      }
+
+      .legend_style {
+        text-align: center;
+        color: gold;
+        background-color: blue;
+        font-size: 30px;
+        font-weight: 900;
+        margin: 0;
+      }
+
+      .qu_style {
+        font-weight: 700;
+        font-size: 16px;
+        position: relative;
+      }
+
+      .line_style {
+        border: 4px solid blue;
+        margin: auto;
+      }
+
+      .tbox_style1 {
+        width: 100px;
+        height: 25px;
+        border: 2px solid black;
+        border-radius: 4px;
+      }
+
+      .tbox_style2 {
+        width: 180px;
+        height: 25px;
+        border: 2px solid black;
+        border-radius: 4px;
+      }
+
+      .date_style {
+        width: 100px;
+        height: 25px;
+        border: 2px solid black;
+        border-radius: 4px;
+      }
+
+      .age_style {
+        width: 50px;
+        height: 25px;
+        border: 2px solid black;
+        border-radius: 4px;
+      }
+
+      .img1_style {
+        width: 300px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" method="get">
+      <legend class="legend_style">리그오브레전드 유저 설문 조사</legend>
+      <div class="line_style">
+        <div class="qu_style">
+          <label for="아이디">계정 :</label>
+          <input class="tbox_style1" type="text" id="아이디" /><br />
+
+          <label for="패스워드">PW :</label>
+          <input class="tbox_style1" type="password" id="패스워드" /><br />
+
+          <label for="email">연동 메일 주소 :</label>
+          <input class="tbox_style2" type="email" id="email" /><br />
+
+          <label for="birthday">생년월일 :</label>
+          <input class="date_style" type="date" id="birthday" /><br />
+
+          <label for="age">나이 :</label>
+          <input class="age_style" type="number" id="age" /><br />
+
+          <img
+            class="img1_style"
+            src="https://image.fmkorea.com/files/attach/new2/20220807/14339012/2857140960/4895564077/370985665619098406c37dae5f67213a.jpg"
+            alt="티모"
+          />
+          <p>플레이 지역 (국내/국외)</p>
+          <select>
+            <option value="국내">국내</option>
+            <option value="국외">국외</option>
+          </select>
+        </div>
+        <br />
+        <p class="qu_style">1. 게임을 접하게 된 경로</p>
+        <div>
+          <label for="answer1">친구</label>
+          <input type="radio" id="answer" name="a2" />
+          <label for="answer1">인터넷</label>
+          <input type="radio" id="answer" name="a2" />
+          <label for="answer1">피시방</label>
+          <input type="radio" id="answer" name="a2" />
+          <label for="answer1">기타(&nbsp;)</label>
+          <input type="radio" id="answer" name="a2" />
+          <input type="text" id="answer1" />
+        </div>
+        <p class="qu_style">2. 선호 포지션 (중복선택 최대 3개)</p>
+        <div>
+          <label for="top">탑</label>
+          <input type="radio" id="top" name="po1" />
+          <label for="jungle">정글</label>
+          <input type="radio" id="jungle" name="po2" />
+          <label for="mid">미드</label>
+          <input type="radio" id="mid" name="po3" />
+          <label for="ad">원딜</label>
+          <input type="radio" id="ad" name="po1" />
+          <label for="sup">서포터</label>
+          <input type="radio" id="sup" name="po1" />
+        </div>
+        <p class="qu_style">3. 일일 플레이 시간</p>
+        <div>
+          <label for="time">1시간 이내</label>
+          <input type="radio" id="time" name="time" />
+          <label for="time">1시간 이상 ~ 3시간 이내</label>
+          <input type="radio" id="time" name="time" />
+          <label for="time">3시간 이상</label>
+          <input type="radio" id="time" name="time" />
+          <label for="time">기타(&nbsp;)</label>
+          <input type="radio" id="time" name="time" />
+          <input type="text" id="time" />
+        </div>
+        <p class="qu_style">4. 선호하는 모드</p>
+        <div>
+          <label for="mode">소환사 협곡(일반)</label>
+          <input type="radio" id="mode" name="mode" />
+          <label for="mode">소환사 협곡(개인/2인랭크)</label>
+          <input type="radio" id="mode" name="mode" />
+          <label for="mode">소환사 협곡(자유랭크)</label>
+          <input type="radio" id="mode" name="mode" />
+          <label for="mode">전략적팀전투(일반)</label>
+          <input type="radio" id="mode" name="mode" />
+        </div>
+        <div>
+          <label for="mode">전략적팀전투(랭크)</label>
+          <input type="radio" id="mode" name="mode" />
+          <label for="mode">전략적팀전투(초고속모드)</label>
+          <input type="radio" id="mode" name="mode" />
+          <label for="mode">전략적팀전투(더블업)</label>
+          <input type="radio" id="mode" name="mode" />
+          <label for="mode">특별모드(궁극기주문서, URF 등)</label>
+          <input type="radio" id="mode" name="mode" />
+        </div>
+        <p class="qu_style">
+          5. 최근 게임 내에서 친절한 소환사를 만난 이력이 있습니까?
+        </p>
+        <div>
+          <label for="answer">네</label>
+          <input type="radio" id="answer" name="a1" />
+          <label for="answer">아니오</label>
+          <input type="radio" id="answer" name="a1" />
+        </div>
+        <p class="qu_style">
+          6. 리그오브레전드의 개선했으면 하는 점이나 하고싶은 말이 있습니까?
+        </p>
+        <div>
+          <textarea cols="70" rows="20" style="overflow: auto"></textarea>
+        </div>
+        <p class="qu_style">
+          ※ 위 설문 내용을 서비스 개선에 활용하는 것에 동의 하십니까?
+        </p>
+        <div>
+          <label for="checkbox">동의</label>
+          <input type="checkbox" id="checkbox" />
+          <div>
+            <button type="submit"><a href="index.html">설문 제출</a></button>
+            <button type="menu">상단으로</button>
+            <button type="reset">설문 내용 초기화</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
