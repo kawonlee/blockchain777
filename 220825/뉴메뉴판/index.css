@@ -1,0 +1,16 @@
+.root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: chocolate;
+  text-align: center;
+  position: relative;
+}
+
+.store_name {
+  font-weight: bold;
+}
+
+/* 매뉴박스에도 화이트로 백그라운드 컬러를 주고 메인 루트에 백그라운드 컬러와 패딩을 주면
+바깥에 삐져나오게 해줄 수 이씀
+http://dawonart.com/product/%EB%8F%88%EA%B9%8C%EC%8A%A4-%EC%96%91%EC%8B%9D-%EC%8B%9D%EB%8B%B9-%EC%9D%8C%EC%8B%9D%EC%A0%90-%EB%A9%94%EB%89%B4%ED%8C%90-%EC%A3%BC%EB%AC%B8-%EC%A0%9C%EC%9E%91-fb005/670/ */

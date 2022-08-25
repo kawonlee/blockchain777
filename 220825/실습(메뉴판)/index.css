@@ -25,16 +25,16 @@
   text-align: center;
 }
 
-.mbackground_img {
-  /* background-image: linear-gradient( 
+/* .mbackground_img {
+   background-image: linear-gradient( 
       rgba(255, 255, 255, 0.2),
       rgba(255, 255, 255, 0.2)
     ),
     url(./람머스따봉.jpg);
   background-size: contain;
   background-repeat: no-repeat;
-  */
-}
+  
+} */
 
 .main_flex {
   display: flex;
