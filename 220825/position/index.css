@@ -1,0 +1,57 @@
+.position1 {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  position: relative;
+  /* 
+  이전 영역의 위치를 기준으로 한다. 
+  inline-block, float처럼 연속되는 영역을 기준으로
+  흐름에 맞춰서 한다.
+  ex) 첫번째 자식이면 부모의 좌측상단(top, left)를 기준으로 한다.
+  첫번째 자식이 아니면 이전 형제의 좌측상단(top, right)을 기준으로 한다.
+  만약에 block이면 좌측 하단(left, bottom)에 맞춘다.
+  */
+  top: 100px;
+  left: 100px;
+}
+
+.position2 {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+
+  position: absolute;
+  /*
+   이전 영역과 같은 위치를 기준으로 한다.(같은 부모를 둔 형제가 많아도 기준은 부모임!)
+   부모의 좌측 상단을 기준으로
+   절대적 위치(흐름을 맞추지 않고 위치를 정한다.)
+   부모의 position이 있어야한다. 없으면 자기의 부모의 부모(할아버지,할머니 -젤 위로 가면 body.
+   고로 position 선언이 안되도 사용은 가능하나 선언을 해줘서 영역을 지정하는 것이 좋다.) 영역을 확인한다.
+   */
+  position: relative;
+  /* 이것의 경우 위에 영역을 기준으로 default가 block이기 때문에 left, bottom
+     기준으로 나온다.
+  */
+  position: fixed;
+  /* 브라우저 기준 그냥 고정*/
+  position: sticky;
+  /*
+    브라우저 기준으로 최대로 움직일 수 있는 곳에서 고정된다고 보면됨
+    표 상단 맨위에 사용하여 헤더 고정(이런쪽에 활용함)
+    설정된 위치 밖으로 나가지 못하도록 막는다. 
+  */
+  top: 100px;
+  /* right: 100px; */
+  /* bottom: 100px; */
+  left: 100px;
+  /* 상단, 우측, 아래, 좌측 */
+  /*
+   top, bottom 이 같이 들어가 있는 경우 top을 우선으로
+   left, right를 같이 쓰면 right를 우선으로     
+  */
+}
+
+.postion3 {
+  position: sticky;
+  background-color: red;
+}
