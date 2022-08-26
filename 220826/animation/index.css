@@ -1,0 +1,120 @@
+div {
+  border: 1px solid black;
+  width: 260px;
+  height: 260px;
+
+  overflow: hidden;
+}
+
+.transform-translate img {
+  transform: translate(100px, 100px);
+  /* transform  모양 이동, 수정 */
+  /* translate 함수는 이동 */
+}
+
+.transform-translatex img {
+  transform: translateX(100px);
+}
+
+.transform-translateY img {
+  transform: translateY(100px);
+}
+
+.transform-scale img {
+  transform: scale(0.5, 2);
+  /* scale 확대, 1이 기본크기(default)
+    배율이라고 생각하면된다.
+    translate 처럼 X, Y가 있다. scaleX, scaleY
+    */
+}
+
+.transform-skew img {
+  transform: skew(15deg, 30deg);
+  /*
+   회전
+   translate 처럼 X,Y가 있다. skewX, skewY 
+   한바퀴 = 360
+   */
+}
+
+.transform-rotate img {
+  transform: rotate(45deg);
+  /*
+  z축 회전
+  우리가 보기엔 축이 점이다. 가운데 기준
+   */
+}
+
+.transform-origin img {
+  transform: rotate(45deg);
+  transform-origin: 0 0;
+}
+/*
+origin은 기준이 되는 축이다.
+x y 순으로 설정한다. 
+ */
+
+.transition img {
+  transition: transform 3s ease, border 1s ease-in-out,
+    border-radius 1s ease-in-out;
+}
+/*
+transition은 애니메이션 효과를 주긴하는데,
+CSS style이 변화하는 것에 대해서 설정한다.
+transform 값 자체는 설정하지 않음x (따로 설정)
+transform에 대해서 변화하는 시간과 변화 방법에 대해서 설정함
+관련 함수(값)들은 알아서 찾아 볼 것
+한 곳에 transition과 transform 값을 같이 넣을 수 있으나, 이렇게 될 경우
+원복이 안된다.(예시에서 hover는 가상이기 때문에)
+ */
+
+.transition:hover img {
+  transform: rotate(720deg);
+  border: 10px dashed red;
+  border-radius: 100%;
+}
+/* transform으로 회전을 넣음 */
+/* border-radius도 X, Y축 설정이 가능하다. ex) 100%, 50% */
+
+@keyframes myanimation {
+  /* 애니메이션 설정한다. */
+  0% {
+    transform: rotate(0);
+    /* from */
+    /* 전체 시간의 0%일때 */
+  }
+  50% {
+    transform: rotate(360deg);
+    /* 전체 시간의 50%일때 */
+  }
+  100% {
+    transform: rotate(0);
+    /* to 로 대체할 수 있다. */
+    /* 전체 시간의 100%일때 */
+  }
+}
+
+.animation:hover img {
+  animation: myanimation 3s ease;
+  /* animation: keyframes이름 시간 변화방법 의 형식으로 사용한다.
+  해당 상태의 경우 새로고침시 애니메이션이 적용됐다가 원복된다.
+  hover를 넣는 경우 마우스 오버를 하는 경우 애니메이션이 진행되고
+  마우스를 대지 않는 경우 바로 기본상태(초기)로 돌아간다.
+  */
+}
+
+.animation:hover .test {
+  animation: myanimation 3s ease;
+}
+
+.animation {
+  position: relative;
+}
+
+.test {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: aquamarine;
+  font-weight: 700;
+}
