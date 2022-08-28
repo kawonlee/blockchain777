@@ -37,18 +37,130 @@
 .middle-main {
   display: flex;
   width: 100%;
-  height: 640px;
+  /* height: 640px; */
   background-image: url(./메이플\ 미들타이틀.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  flex-wrap: wrap;
+}
+
+.menu-flex {
+  display: flex;
+  width: 70%;
+  height: 100px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.icon-img {
+  width: 120px;
+  height: 60px;
+}
+
+div.menu-flex {
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
 }
 
 .middle-main-item {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .middle-img1 {
+  width: 600px;
   height: 300px;
+}
+
+.middle-bottom-item {
+  background-image: url(./로그인창\ 쪽\ 이미지.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.update-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: url(./메이플\ 업데이트\ 이미지.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+button {
+  margin: 3px;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.nexon-login {
+  background-color: dodgerblue;
+  border: none;
+  width: 200px;
+  height: 50px;
+}
+
+.maple-login {
+  background-color: darkorange;
+  border: none;
+  width: 200px;
+  height: 50px;
+}
+
+.qr-login {
+  background-color: dimgray;
+  border: none;
+  width: 120px;
+  height: 40px;
+}
+
+.other-login {
+  background-color: dimgray;
+  border: none;
+  width: 280px;
+  height: 40px;
+}
+
+.bottom {
+  display: flex;
+  width: 100%;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-item1 {
+  background-color: blanchedalmond;
+  width: 600px;
+  height: 320px;
+  margin-bottom: 30px;
+}
+
+.bottom-item2 {
+  background-color: blanchedalmond;
+  width: 300px;
+  height: 320px;
+  margin-bottom: 30px;
+}
+
+.bottom-under {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(55, 55, 58);
+  width: 100%;
+  height: 80px;
 }
