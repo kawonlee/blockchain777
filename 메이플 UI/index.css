@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+.root {
+  min-width: 1200px;
+}
+
 .top-title {
   display: flex;
   width: 100%;
@@ -47,10 +51,17 @@
 
 .menu-flex {
   display: flex;
-  width: 70%;
+  /* width: 80%; */
+  width: 1200px;
+  margin: 0 auto;
   height: 100px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.menu-flex > p {
+  min-width: 100px;
 }
 
 .icon-img {
@@ -66,14 +77,17 @@ div.menu-flex {
 
 .middle-main-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  width: 100%;
+  /* width: 80%; */
+  width: 1200px;
+  height: 700px;
+  margin: 0 auto;
 }
 
 .middle-img1 {
-  width: 600px;
-  height: 300px;
+  width: 1200px;
+  height: 600px;
 }
 
 .middle-bottom-item {
@@ -82,9 +96,10 @@ div.menu-flex {
   background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-top: 30px;
+  justify-content: space-around;
+  /* width: 80%; */
+  width: 1200px;
+  margin: 30 auto;
 }
 
 .update-img {
@@ -95,6 +110,7 @@ div.menu-flex {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin-left: 10px;
 }
 
 button {
@@ -136,22 +152,26 @@ button {
 
 .bottom {
   display: flex;
-  width: 100%;
-  margin-top: 50px;
-  align-items: center;
-  justify-content: center;
+  /* width: 80%; */
+  width: 1200px;
+  /* margin-top: 50px; */
+  margin: 0 auto;
+  /* align-items: center; */
+  /* justify-content: center; */
 }
 
 .bottom-item1 {
   background-color: blanchedalmond;
-  width: 600px;
+  /* width: 400px; */
+  width: 470px;
   height: 320px;
   margin-bottom: 30px;
 }
 
 .bottom-item2 {
   background-color: blanchedalmond;
-  width: 300px;
+  /* width: 280px; */
+  width: 320px;
   height: 320px;
   margin-bottom: 30px;
 }
@@ -161,6 +181,45 @@ button {
   align-items: center;
   justify-content: space-around;
   background-color: rgb(55, 55, 58);
+  /* width: 80%; */
+  width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+ul li {
+  letter-spacing: -0.03em;
+}
+
+.span-style {
+  position: relative;
+  top: -15px;
+}
+
+.issue-tag {
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 80px;
+  background-color: rgb(94, 132, 158);
+}
+
+.issue-item {
+  width: 200px;
+  background: none;
+  color: white;
+  height: 40px;
+  padding-left: 10px;
+  background-color: rgb(71, 110, 139);
+  border: none;
+  border-radius: 4px;
+}
+
+.issue-item-tag {
+  width: auto;
+  height: 40px;
+  padding: 0 10px;
+  color: white;
+  background-color: cadetblue;
 }

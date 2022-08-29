@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="./파피콘-메이플.png" type="image/x-icon" />
   </head>
   <body>
-    <div>
+    <div class="root">
       <div class="top-title">
         <div class="top-title-item">
           <img src="./메뉴 삼선.PNG" alt="메뉴사진" class="menu-img1" />
@@ -56,7 +56,7 @@
       <!-- 중단 이미지 -->
       <div class="middle-bottom-item">
         <div class="update-img"></div>
-        <ul type="none">
+        <ul type="none" style="letter-spacing: -0.03em">
           <li
             style="
               font-size: 20px;
@@ -67,12 +67,16 @@
           >
             업데이트 정보센터
           </li>
-          <li style="color: lightslategray">
+          <li style="color: lightslategray; font-size: 15px">
             2022.08.25 / ver.1.2.368업데이트 미리보기
           </li>
         </ul>
         <button type="submit">
-          <img src="./게임 시작 이미지.jpg" alt="start" />
+          <img
+            src="./게임 시작 이미지.jpg"
+            alt="start"
+            style="width: 180px; height: 180px"
+          />
         </button>
         <ul type="none">
           <li>
@@ -98,7 +102,7 @@
             src="./좌측 하단 이미지.png"
             alt="하단 이미지"
             style="
-              width: 400px;
+              width: 380px;
               height: 320px;
               margin-right: 30px;
               margin-bottom: 30px;
@@ -106,55 +110,45 @@
           />
         </div>
         <ul class="bottom-item1" type="none">
-          <li
-            style="
-              font-weight: bold;
-              font-size: 20px;
-              margin-left: 20px;
-              margin-top: 30px;
-            "
-          >
+          <li style="margin-left: 20px; margin-top: 30px">
             클라이언트 1.2.368(2) 업데이트 안내
+            <p
+              style="
+                font-weight: normal;
+                margin-bottom: 20px;
+                color: dimgray;
+                font-size: 14px;
+              "
+            >
+              8/26(금) 업데이트된 내용을 확인해주세요.
+            </p>
           </li>
-          <li style="margin-left: 20px; margin-bottom: 20px">
+          <!-- <li style="margin-left: 20px; margin-bottom: 20px">
             8/26(금) 업데이트된 내용을 확인해주세요.
-          </li>
-          <hr style="width: 500px" />
-          <li
-            style="
-              font-weight: bold;
-              font-size: 20px;
-              margin-left: 20px;
-              margin-top: 20px;
-            "
-          >
+          </li> 피드백 받은 내용 수정 li태그 -> li하위에 p태그 -->
+          <hr style="width: 330px; margin-left: 20px" />
+          <li style="margin-left: 20px; margin-top: 20px">
             8/19(금) 운영정책위반 단속결과
+            <p
+              style="
+                font-weight: normal;
+                margin-bottom: 20px;
+                color: dimgray;
+                font-size: 14px;
+              "
+            >
+              총 4,053개 계정이 단속 되었습니다.
+            </p>
           </li>
-          <li style="margin-left: 20px; margin-bottom: 20px">
+          <!-- <li style="margin-left: 20px; margin-bottom: 20px">
             총 4,053개 계정이 단속 되었습니다.
-          </li>
-          <hr style="width: 500px" />
-          <li
-            style="
-              font-weight: bold;
-              font-size: 20px;
-              margin-left: 20px;
-              margin-top: 10px;
-              margin-bottom: 10px;
-            "
-          >
+          </li> -->
+          <hr style="width: 330px; margin-left: 20px" />
+          <li style="margin-left: 20px; margin-top: 20px; margin-bottom: 20px">
             2022년 7월 확률형 아이템 검증 결과 공개
           </li>
-          <hr style="width: 500px" />
-          <li
-            style="
-              font-weight: bold;
-              font-size: 20px;
-              margin-left: 20px;
-              margin-top: 10px;
-              margin-bottom: 20px;
-            "
-          >
+          <hr style="width: 330px; margin-left: 20px" />
+          <li style="margin-left: 20px; margin-top: 20px">
             (수정)일부 월드 캐릭터 신규 생성제한 안내
           </li>
         </ul>
@@ -163,16 +157,52 @@
             <img
               src="./이것만은 알고하자.PNG"
               alt="공지1"
-              style="margin-top: 30px"
+              style="margin-top: 30px; margin-left: 20px"
             />
+            <p
+              style="
+                font-size: 17px;
+                font-weight: bold;
+                margin-bottom: 20px;
+                text-align: center;
+                margin-left: -50px;
+              "
+            >
+              이것만은 알고하자!
+            </p>
           </li>
-          <li style="font-size: 17px; font-weight: bold; margin-bottom: 20px">
+          <!-- <li style="font-size: 17px; font-weight: bold; margin-bottom: 20px">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이것만은 알고하자!
-          </li>
+          </li> -->
           <li>
-            <img src="./이것만 밑에.PNG" alt="공지2" />
+            <img
+              src="./이것만 밑에.PNG"
+              alt="공지2"
+              style="margin-left: 20px"
+            />
+            <p
+              style="
+                font-size: 17px;
+                font-weight: bold;
+                /* margin-left: -10px; */
+                margin-left: -60px;
+                text-align: center;
+              "
+            >
+              <button
+                style="
+                  width: 45px;
+                  height: 25px;
+                  font-size: 18px;
+                  background-color: darkorange;
+                "
+              >
+                new
+              </button>
+              가이드 업데이트 안내
+            </p>
           </li>
-          <li style="font-size: 17px; font-weight: bold; margin-bottom: 20px">
+          <!-- <li style="font-size: 17px; font-weight: bold; margin-bottom: 20px">
             <button
               style="
                 width: 45px;
@@ -184,46 +214,72 @@
               new
             </button>
             가이드 업데이트 안내
-          </li>
+          </li> -->
         </ul>
       </div>
       <div class="bottom-under">
         <button
           type="submit"
           style="
-            font-size: 20px;
+            font-size: 14px;
             background-color: rgb(55, 55, 58);
             margin-left: 20px;
             font-weight: normal;
           "
         >
-          <img src="./버그 아이콘.PNG" alt="버그" style="border-radius: 50%" />
-          <span>버그악용/불법프로그램 신고</span>
+          <img
+            src="./버그 아이콘.PNG"
+            alt="버그"
+            style="border-radius: 50%; margin-right: 10px"
+          />
+          <span class="span-style">버그악용/불법프로그램 신고</span>
         </button>
         <button
           type="submit"
           style="
-            font-size: 20px;
+            font-size: 14px;
             background-color: rgb(55, 55, 58);
             margin-left: 20px;
             font-weight: normal;
           "
         >
-          <img src="./프리미엄pc.PNG" alt="PC" style="border-radius: 50%" />
-          <span>프리미엄PC방 혜택보기</span>
+          <img
+            src="./프리미엄pc.PNG"
+            alt="PC"
+            style="border-radius: 50%; margin-right: 10px"
+          />
+          <span class="span-style">프리미엄PC방 혜택보기</span>
         </button>
         <button
           type="submit"
           style="
-            font-size: 20px;
+            font-size: 14px;
             font-weight: normal;
             background-color: rgb(55, 55, 58);
             margin-left: 20px;
           "
         >
-          <img src="./테스트월드.PNG" alt="테섭" style="border-radius: 50%" />
-          <span>테스트월드 바로가기</span>
+          <img
+            src="./테스트월드.PNG"
+            alt="테섭"
+            style="border-radius: 50%; margin-right: 10px"
+          />
+          <span class="span-style">테스트월드 바로가기</span>
         </button>
+      </div>
+      <div class="issue-tag">
+        <h2 style="color: white">
+          ISSUE TAG
+          <input type="text" class="issue-item" />
+        </h2>
+        <ul type="none">
+          <li class="issue-item-tag"><span>#앱솔랩스</span></li>
+          <li class="issue-item-tag"><span>#너클</span></li>
+          <li class="issue-item-tag"><span>#해적</span></li>
+          <li class="issue-item-tag"><span>#다른거키우니까개재밌네</span></li>
+          <li class="issue-item-tag"><span>#밸런스패치</span></li>
+          <li class="issue-item-tag"><span>#데벤</span></li>
+        </ul>
       </div>
     </div>
   </body>
