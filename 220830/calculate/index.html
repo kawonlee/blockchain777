@@ -1,0 +1,125 @@
+<!-- 비NCS JavaScript 프로그래밍 언어 -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculate</title>
+  </head>
+  <body>
+    <script>
+      //   형 변환 : 자료형을 바꿔준다. ex) string -> number
+      //   형 변환은 나중에 배우자
+
+      // 연산자
+      // 이름 그대로 연산(계산)하는 명령어
+
+      // +는 더하기
+      // 숫자는 +더하기 자체, 글자는 붙인다 ex) 자료+구조 =자료구조
+      let plus1 = "자료";
+      let plus2 = "구조";
+      console.log(plus1 + plus2);
+      //   숫자랑 글자를 더한 경우 --> 그냥 글자로 취급해서 붙인다.
+
+      //   -는 숫자에서 사용(글자에선 사용안됨)
+      //  *는 숫자에서 사용
+      //  /는 숫자에서 사용
+      //   %는 숫자에서 사용 -> 나눈 후 나머지를 찾는다. 나머지가 없는 경우 0 이 나옴 예제에서 5 % 3 은 5를 3으로 나눈 후 나머지를 찾는다는 의미이므로 2가 나온다.
+      console.log(4 / 3);
+      console.log(4 % 3);
+      console.log(5 % 3);
+      // **는 숫자에서 사용. 제곱을 뜻함 예시에선 3의 4제곱이라고 보면됨
+      console.log(3 ** 4);
+
+      //   ++, -- 둘 다 카운터용으로 사용한다. 숫자를 하나 늘리거나 줄이거나 할 때 사용 / 여러줄이 진행되는 경우 매 줄마다 count가 새로 정의된다?
+      let count = 0;
+      console.log(++count);
+      //  1. ++은 숫자에 대해 +1을 한다. 앞에 붙으면 +1을 하고 그 줄을 실행한다(출력한다).
+      console.log(--count);
+      //   2. --는 숫자에 대해 -1을 한다. 앞에 붙으면 -1을 하고 그 줄을 실행한다(출력한다).
+      console.log(count++);
+      //   3. ++은 숫자에 대해 +1을 한다. 뒤에 붙으면 그 줄을 실행하고서 +1을 한다.
+      console.log(count--);
+      //   4. --는 숫자에 대해 -1을 한다. 뒤에 붙으면 그 줄을 실행하고서 -1을 한다.
+      console.log(count);
+
+      //   1. 1을 더하고 console.log를 실행한다.
+      count = count + 1;
+      console.log(count);
+      //   2. 1을 빼고 console.log를 실행한다.
+      count = count - 1;
+      console.log(count);
+      //  3. console.log를 실행하고 1을 더한다.
+      console.log(count);
+      count = count + 1;
+      // 4. console.log를 실행하고 1을 빼준다.
+      console.log(count);
+      count = count - 1;
+
+      //   -, ! 둘다 현재 상태의 부정
+      // 변수가 true -> false로 바꿔준다.
+      // !! -> 부정의 부정 -> 현재가 boolean값이 아니다. 이걸 boolean값으로 변환할 때 !!사용
+      let exclamation = 1;
+      console.log(typeof exclamation);
+      console.log(typeof !!exclamation);
+      console.log(!!exclamation);
+      console.log(!exclamation);
+
+      //   = 대입 연산자, 좌측에 우측의 값을 정의한다.
+      let test = 1;
+
+      //   +=, -=, *=, /=, %=, **=                  // ** = 제곱
+      test += 2;
+      // <- test = test + 2
+      test -= 2;
+      // <- test = test - 2
+      //   나머지들도 같은 의미로 사용된다.
+
+      let test1 = 2;
+      test **= 3;
+      console.log(test1);
+
+      const test2 = 1;
+      const test3 = 2;
+      const test4 = 1;
+      const test5 = "1";
+
+      console.log(test2 == test3);
+      console.log(test2 == test4);
+      console.log(test2 == test5);
+      //   ==는 같다라는 의미이다.(값만 확인한다고 생각하면됨/ 같으면 true, 다르면 false)
+
+      console.log(test2 === test5);
+      //   ===는 자료형(타입)까지 확인한다.
+
+      console.log(test2 != test3);
+      console.log(!(test2 == test3));
+      //   94, 95번째 줄은 같은 말
+      console.log(test2 != test4);
+      console.log(test2 != test5);
+
+      console.log(test2 !== test5);
+      //   != 는 같지 않은가를 확인한다.(다르면 true, 같으면 false
+      //    !== 은 ===과 마찬가지로 자료형까지 확인한다.
+
+      console.log(test2 < test3);
+      console.log(test2 < test4);
+      console.log(test2 < test5);
+
+      console.log(test2 > test3);
+      console.log(test2 > test4);
+      console.log(test2 > test5);
+
+      console.log(test2 <= test3);
+      console.log(test2 <= test4);
+      console.log(test2 <= test5);
+
+      console.log(test2 >= test3);
+      console.log(test2 >= test4);
+      console.log(test2 >= test5);
+
+      // +, -, *, /, %, **, ++, --, -, !, &&, ||, =, +=, -=, *=, /=, %=, **=, ==, ===, !=, !==, >, <, >=, <=
+      //   &&, ||, ? : 는 내일
+    </script>
+  </body>
+</html>
