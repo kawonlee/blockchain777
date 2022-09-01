@@ -1,0 +1,16 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scope</title>
+  </head>
+  <body>
+    <script src="index.js"></script>
+    <script>
+      console.log(a); // 결과값이 뜬다. 전역변수는 어디서든 사용할 수 있기때문에,
+      // 위에 정의된 index.js파일내 전역변수가 선언되어 있으므로, 이를 읽어와
+      // html에서 참조하여 출력한다. 따라서 콘솔창 보면 index.html에서 출력했다고 뜸.
+    </script>
+  </body>
+</html>

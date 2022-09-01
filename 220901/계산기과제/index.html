@@ -1,0 +1,69 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>응애</title>
+    <script src="index.js"></script>
+    <style>
+      * {
+        margin-bottom: 20px;
+        padding: 0;
+      }
+      div {
+        margin-bottom: 3px;
+      }
+      .button_style {
+        width: 70px;
+        height: 70px;
+        color: white;
+        background-color: darkcyan;
+        border: none;
+        margin: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2>계산기라고 하옵니다.</h2>
+      <img
+        src="https://w.namu.la/s/fa7ec3b85cf3bf7e23d589f66c764bf37544364c4829eab3108e77863f3be888ba07874929773f39b1f88c9e284029f5101de65344f97b424e16f3c708f51ffa1686632a5784609844e839944fef3e6f8069bf791a36e1e0273e79eb30031b8a"
+        alt="파이리"
+      />
+    </div>
+    <div>
+      <button class="button_style" onclick="one()"><h1>1</h1></button>
+      <button class="button_style" onclick="two()"><h1>2</h1></button>
+      <button class="button_style" onclick="three()"><h1>3</h1></button>
+      <button class="button_style" onclick="sum()"><h1>+</h1></button>
+    </div>
+    <div>
+      <button class="button_style" onclick="four()"><h1>4</h1></button>
+      <button class="button_style" onclick="five()"><h1>5</h1></button>
+      <button class="button_style" onclick="six()"><h1>6</h1></button>
+      <button class="button_style" onclick="div()"><h1>-</h1></button>
+    </div>
+    <div>
+      <button class="button_style" onclick="seven()"><h1>7</h1></button>
+      <button class="button_style" onclick="eight()"><h1>8</h1></button>
+      <button class="button_style" onclick="nine()"><h1>9</h1></button>
+      <button class="button_style" onclick="mul()"><h1>x</h1></button>
+    </div>
+    <div>
+      <button
+        style="
+          width: 233px;
+          height: 70px;
+          color: white;
+          background-color: darkcyan;
+          border: none;
+          margin: 3px;
+        "
+        onclick="zero()"
+      >
+        <h1>0</h1>
+      </button>
+      <button class="button_style" onclick="div()"><h1>/</h1></button>
+    </div>
+  </body>
+</html>
