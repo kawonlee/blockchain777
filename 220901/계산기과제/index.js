@@ -23,7 +23,11 @@ let main;
 function num(main) {
   count++;
   if (count == 1) {
-    main = a;
+    main = firstNum;
+    console.log("첫번째 고른 숫자는" + firstNum + "입니다.");
+  } else if (count == 2) {
+    main = secondNum;
+    console.log("두번째 고른 숫자는" + secondNum + "입니다.");
   }
 }
 
