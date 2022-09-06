@@ -1,0 +1,17 @@
+.btn {
+  width: 200px;
+  border: none;
+  background-color: lightskyblue;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.btn:first-child {
+  background-color: lightcoral;
+}
