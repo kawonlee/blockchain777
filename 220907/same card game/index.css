@@ -1,0 +1,16 @@
+.main {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 100px;
+  height: 150px;
+  background-color: cadetblue;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-right: 10px;
+  cursor: pointer;
+}
