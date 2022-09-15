@@ -1,0 +1,46 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .delete {
+        text-decoration: line-through;
+        text-decoration-color: red;
+      }
+
+      button {
+        background-color: cornflowerblue;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        height: 30px;
+      }
+
+      #todo-input {
+        width: 300px;
+        height: 30px;
+        border: 2px solid cornflowerblue;
+        border-radius: 5px;
+      }
+
+      li {
+        font-size: 18px;
+        font-weight: bold;
+        color: cornflowerblue;
+        margin: 10 10;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="todo-input" />
+      <button id="todo-add">할일 추가</button>
+    </div>
+    <ul id="todo-list"></ul>
+    <script src="index.js"></script>
+  </body>
+</html>

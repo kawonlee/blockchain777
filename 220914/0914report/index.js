@@ -63,11 +63,11 @@ function is_checked() {
   const checkbox = document.getElementById("checking");
   let is_checked = checkbox.checked;
   console.log(is_checked);
-  if (is_checked == "true") {
-    document.getElementById("delete").onclick = () => {
-      document.getElementById("list-main").value = "";
-    };
-  } else is_checked == "false";
+  // if (is_checked === true) {
+  //   document.getElementById("delete").onclick = () => {
+  //     todoList.filter
+  //   };
+  // }
 }
 // document.getElementById("delete").onclick = () => {
 //   if (document.getElementById("todotext").checked = ) {
