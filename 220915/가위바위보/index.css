@@ -35,18 +35,20 @@
   font-weight: bold;
 }
 
-.computer-line {
+#computer-line {
   display: flex;
   background-color: darkblue;
   height: 400px;
   margin-top: 40px;
   justify-content: center;
   align-items: center;
+  /* position: relative; */
 }
 
 .computer-img {
   height: 400px;
   border-radius: 50px;
+  /* position: absolute; */
 }
 
 .winner {
