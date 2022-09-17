@@ -30,7 +30,7 @@ function reset() {
   // ...은 (스프레드 =)전개 구문이라고 한다.
   // 배열, 객체 등 연속되는 데이터들을 하나하나 분해한다.
   // [...comSet]은 comSet의 아이템 하나하나를 분해해서 배열내에 넣어준다.
-  // 만약에 comSet.size가 3이면 [comSet[0], comSet[1], comSet[2]]와 같은 말이다.
+  // 만약에 comSet.size가 < 3이면 [comSet[0], comSet[1], comSet[2]]와 같은 말이다.
   console.log(comSel);
   alert("컴퓨터는 준비를 마쳤다. 맞춰봐라, 애송이");
 }

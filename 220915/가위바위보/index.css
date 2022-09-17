@@ -130,3 +130,14 @@
   width: 150px;
   height: 150px;
 }
+
+#coin {
+  width: 500px;
+  background-color: cadetblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
