@@ -64,7 +64,7 @@ let expressionHoisting = function () {
 expressionHoisting();
 
 const arrowHoisting = () => {
-  // 화살표 함수를 사용하면 hoisting을 막을 수 있다.
+  //  함수를 사용하면 hoisting을 막을 수 있다.
   console.log(++a);
 };
 

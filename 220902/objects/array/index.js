@@ -16,13 +16,15 @@ const obj = {
 // const arr = [1, 2, 3];
 const arr = ["정재훈", "염예나", "김성진", "최원겸", "김선주"];
 // 배열도 객체다.
-arr.push();
+arr.push("이가원");
+console.log(arr);
 // push 메서드를 호출
 console.log(arr.length);
 // 배열의 길이를 나타내는 프로퍼티 => 배열의 가짓수
 //단축키에서 보라상자 메서드, 파란상자는 프로퍼티
 // 코드 상에서는 .을 기준으로 하늘색 프로퍼티(앞), 연한노랑 메서드(뒤)
-let tempReturn = arr.indexOf(3);
+let tempReturn = arr.indexOf("김선주");
+console.log(tempReturn);
 // 배열에 있는 아이템을 찾아서 그 위치를 알려준다. 즉 위치를 리턴해준다.
 // 없으면 -1, 첫번째 있으면 0을 반환해준다. 리턴해준다.
 // 해당 예시에선 3을 넣었으므로 3번째 자리에 있으므로 2가 콘솔창에 출력된다.

@@ -20,6 +20,7 @@ console.log(str.replace(/D/, "X"));
 // 첫번째 매개변수로 정규표현식을 전달하고, 두번째 매개변수로 바꾸고싶은 텍스트를 전달한다.
 // 대체하고자 하는 매개변수 란에 공백도 가능하다
 // ex) console.log(str.replace(/D/, " "));
+console.log(str.replace(/D/, " "));
 
 console.log(str.toLowerCase()); // 전부 소문자로
-console.log(str.toUpperCaseCase()); // 전부 대문자로
+console.log(str.toUpperCase()); // 전부 대문자로
