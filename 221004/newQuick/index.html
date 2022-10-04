@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>퀵 정렬 새배열</title>
+  </head>
+  <body>
+    <script>
+      function quickSort(arr) {
+        if (arr.length < 2) return arr;
+        let pivot = arr.shift();
+        const leftArr = [];
+        const rightArr = [];
+        while (arr.length) {
+          const temp = arr.shift();
+          if (temp < pivot) leftArr.push(temp);
+          else rightArr.push(temp);
+        }
+        return [...quickSort(leftArr), pivot, ...quickSort(rightArr)];
+      }
+      //  정확한 퀵정렬은 아님. 이해를 위함
+    </script>
+  </body>
+</html>

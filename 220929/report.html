@@ -1,0 +1,51 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0929 프로그래머스 과제</title>
+  </head>
+  <body>
+    <script>
+      // 피보나치 수열
+      // function solution(n) {
+      //   let Arr = [0, 1];
+      //   for (let i = 2; i < n + 1; i++) {
+      //     //   if (i == 0) Arr.push(0);
+      //     //   if (i == 1) Arr.push(1);
+
+      //     console.log(`${i}값 넣었다`);
+      //     Arr.push((Arr[i - 2] + Arr[i - 1]) % 1234567);
+      //     console.log(Arr);
+      //   }
+      //   return Arr[n];
+      // }
+      // console.log(solution(7));
+      //   arr = [1, 2, 3, 4, 5];
+      //   console.log(arr);
+
+      // 피보나치 수열 재귀함수로
+      // let Arr = [];
+      // function solution(n) {
+      //   console.log(`${n}값 넣었다`);
+      //   if (n < 2) Arr.push(n);
+      //   // Arr.push(Arr[n - 1] + Arr[n - 2]);
+      //   else Arr.push();
+      //   console.log(Arr);
+      //   return Arr;
+      //   // soultion(n + 1);
+      //   // return [...n];
+      // }
+      // console.log(solution(0));
+
+      function fibonacci(n) {
+        if (n < 2) return n;
+        return fibonacci(n - 1) + fibonacci(n - 2);
+      }
+      for (let i = 0; i < 21; ++i) {
+        console.log(fibonacci(i));
+      }
+      console.log(fibonacci(4));
+    </script>
+  </body>
+</html>

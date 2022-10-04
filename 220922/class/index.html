@@ -7,6 +7,7 @@
   </head>
   <body>
     <script>
+      //프로그래밍 중 하나 - 클래스 (함수, 객체랑 비슷하게 클래스라는게 있구나~ 라고 보면됨)
       console.log(new Date()); // 보통 new뒤에 있는 애들이 class를 생성하는 애들
       console.log(new Set([1, 2, 3]));
 
@@ -72,15 +73,15 @@
         }
 
         consoleLog() {
-          // Student 클래스에서 consoleLog() 메서드가 재 정의 된 것이다. (76번째 줄 내용으로)
-          console.log("이름은" + this.name + "입니다.");
-          super.consoleLog(); // 부모의 consoleLog() 메서드를 가져온다. 왜냐!! 74번째 줄의 consoleLog() 메서드는 재정의 되어 기존의 consoleLog()메서드의
+          // Student 클래스에서 consoleLog() 메서드가 재 정의 된 것이다. (77번째 줄 내용으로)
+          console.log("이름은 " + this.name + "입니다.");
+          super.consoleLog(); // 부모의 consoleLog() 메서드를 가져온다. 왜냐!! 75번째 줄의 consoleLog() 메서드는 재정의 되어 기존의 consoleLog()메서드의
           // 내용이 아니기 때문에 부모의 consoleLog() 메서드를 사용하기 위해 super를 통해 불러온다.
         }
       }
-      const kjk = new Student("김정규", 1);
-      kjk.consoleLog();
-      console.log(kjk);
+      const studentList = new Student("이가원", 8);
+      studentList.consoleLog();
+      console.log(studentList);
     </script>
   </body>
 </html>

@@ -1,0 +1,29 @@
+상위 노드를 기준으로 왼쪽이 작은 수, 오른쪽이 큰 수 => 이진탐색트리
+
+현재까지의 코드 트리 맨 하단의 노드들은 삭제 가능하다.
+remove(data, node = this.root) {
+remove 메서드 node값이 안들어갔을경우 최상위 노드인 root노드를 기준으로 코드를 돌리겠다.
+          if (!this.root) return;
+조건문 - 만약 루트가 없으면 remove 메서드를 끝내겠다.(예외처리, 돌리지 않겠다.)
+          if (node.data > data) {
+조건문 - 만약 현재 데이터가 지우려는 데이터보다 크다면 = 지우려는 데이터가 현재 데이터보다 작다. = 왼쪽
+            if (node.left) {
+조건문 - 노드의 왼쪽이 있다면
+              node.left = this.remove(data, node.left);
+노드의 왼쪽을 remove메서드 재귀함수를 돌린다. 재귀함수를 돌릴 때 node값을 현재 노드의 왼쪽값으로 줘서 타고타고 내려가게끔 선언했다.
+            } 
+          } else if (node.data < data) {
+조건문 - 만약 지우려는 데이터가 현재 노드보다 크다면 = 오른쪽
+            if (node.right) {
+조건문 - 노드의 오른쪽이 있다면
+              node.right = this.remove(data, node.right);
+노드의 오른쪽을 remove메서드 재귀함수를 돌린다. 재귀함수를 돌릴 때 node값을 현재 노드의 오른쪽값으로 줘서 타고타고 내려가게끔 선언했다.
+            } 
+          } else {
+현재 데이터와 지우려는 데이터가 일치하면
+            return undefined;
+undefined값을 반환해주겠다. (임시코드)
+          }
+          return node;
+node 값을 반환해준다. => 반환하는 이유는 현재 노드값을 반환해주지 않는 경우 위의 코드에서 조건문에 들어가는 노드들이 전부 지워진다.
+        }

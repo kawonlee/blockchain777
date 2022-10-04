@@ -1,0 +1,172 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  1번 function solution1(num) {
+      //     let answer = "";
+      //     if (num % 2 == 0) {
+      //       answer = "Even";
+      //     } else answer = "Odd";
+      //     return answer;
+      //   }
+      //   console.log(solution1(4));
+      // 1번 교수님 풀이
+      // function solution(num) {
+      //   return num % 2 ? "Odd" : "Even";
+      // }
+
+      // 2번 문제
+      //   function solution(arr) {
+      //     let answer = 0;
+      //     for (let i = 0; i < arr.length; i++) {
+      //       answer += arr[i];
+      //     }
+      //     return answer / arr.length;
+      //   }
+      //   console.log(
+      //     solution([
+      //       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+      //       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+      //       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+      //       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+      //       1, 1, 1, 1, 1, 1, 1, 1,
+      //     ])
+      //   );
+
+      //   function solution(arr) {
+      //     let answer = 0;
+      //     for (let i = 0; i < arr.length; i++) {
+      //       answer += arr[i] / arr.length;
+      //     }
+      //     return answer;
+      //   }
+      // 2번문제 교수님 풀이
+      // function solution(arr) {
+      //   return arr.reduce((prev, curr) => return prev + curr, 0) / arr.length;
+      // } reduce는 이전값과 현재값을 적고 이 둘을 어떻게 할 것인지 첫번째 매개변수로 함수, 두번째 매개변수로 초기값(default값)이 들어간다.
+
+      // 3번문제
+      //   function solution(n) {
+      //     let answer = 0;
+      //     for (let i = 1; i <= n; i++) {
+      //       if (n % i == 0) answer += i;
+      //     }
+      //     return answer;
+      //   }
+      // 3번문제 교수님 풀이
+      // function solution(n) {
+      //   let answer = 0;
+      //   for (let i = 1; i < n / 2; i++) if (!(n % i)) answer += i + n / i;
+      //   return answer;
+      // } 이 풀이는 확인 좀 해봐야함 (문제점들이 있음)
+
+      //4번문제
+      //   let num = (123456).toString();
+      //   console.log(num);
+      //   console.log(parseInt(num.substring(0, 1)));
+      //   console.log(parseInt(num.substring(0, num.length - 5)));
+      //   console.log(num.substring(1, 2));
+      //   console.log(num.substring(2, 3));
+      //   console.log(num.substring(3, 4));
+      //   console.log(num.substring(4, 5));
+      //   console.log(num.substring(5, 6));
+
+      //   function solution(n) {
+      //     let answer = 0;
+      //     let num = n.toString();
+      //     for (let i = 0; i < num.length; i++) {
+      //       answer += parseInt(num.slice(i, i + 1));
+      //     }
+
+      //     return answer;
+      //   }
+      //   console.log(solution(55));
+
+      // 4번 문제 교수님 풀이
+      // function solution(n) {
+      //   return n
+      //     .toString()
+      //     .split("")
+      //     .reduce((prev, curr) => prev + +curr, 0);
+      // } +curr << 형변환 문자를 숫자로
+
+      // 5번 문제
+      //   console.log(Math.pow(3, 2));
+
+      //   function solution(n) {
+      //     for (let x = 1; Math.pow(x, 2) <= n; x++) {
+      //       console.log(`for문 시작 ${x}`);
+      //       if (Math.pow(x, 2) == n) {
+      //         console.log("이프문 도냐?");
+      //         return Math.pow(x + 1, 2);
+
+      //       }
+      //     }
+      //     return -1;
+      //   }
+      //   console.log(solution(121));
+      // 5번 문제 교수님 풀이
+      // function solution(n) {
+      //   let answer = parseInt(Math.sqrt(n));
+      //   if (n === Math.pow(answer, 2)) return Math.pow(answer + 1, 2);
+      //   return -1;
+      // }
+
+      // 6번 문제
+      function solution(n) {
+        let answer = [];
+        let num = n.toString();
+        for (let i = 1; i <= num.length; i++) {
+          answer.push(parseInt(num.slice(num.length - i, num.length - i + 1)));
+        }
+        return answer;
+      }
+      console.log(solution(1234));
+      // 6번 문제 스프레드 사용해서
+      //   function solution(n) {
+      //     let num = n.toString();
+      //     let answer = [...num];
+      //     for (let i = 0; i < answer.length; i++) {
+      //       answer[i] = parseInt(answer[i]);
+      //     }
+      //     return answer.reverse();
+      //   }
+
+      //   console.log(solution(100));
+      // 6번문제 초기코드 (slice에 reverse)
+      //     function solution(n) {
+      //     let answer = [];
+      //     let num = n.toString();
+      //     for (let i = 0; i < num.length; i++) {
+      //       answer.push(parseInt(num.slice(i, i + 1)));
+      //     }
+      //     return answer.reverse();
+      //   }
+
+      // 6번 문제 교수님 풀이
+      // function soultion(n) {
+      //   return n
+      //     .toString()
+      //     .split("")
+      //     .map((_, index, arr) => {
+      //       return +arr[arr.length - 1 - index];
+      //     });
+      // n.toString() => '12345' / n.split() => '1', '2', '3', '4', '5'
+      // _ : 값을 쓰지 않을 때 통상적으로 사용한다. << 우리는 배열 내의 아이템은 사용하지 않는다.
+      // map, forEach의 경우 item, index, array 순으로 매개변수를 받아올 수 있다.
+      // }
+      // function solution(n) {
+      //   return n
+      //     .toString()
+      //     .split("")
+      //     .reverse()
+      //     .map((item) => +item);
+      // }
+    </script>
+  </body>
+</html>

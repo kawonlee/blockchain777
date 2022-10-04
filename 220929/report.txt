@@ -1,0 +1,14 @@
+기본
+<우선순위 2개>
+피노나치 수 : https://school.programmers.co.kr/learn/courses/30/lessons/12945
+하노이의 탑 : https://school.programmers.co.kr/learn/courses/30/lessons/12946
+- 위 2개는 팀장급들이 어떻게든 도와라
+
+문자열 내 p와 y의 개수 : https://school.programmers.co.kr/learn/courses/30/lessons/12916
+하샤드 수 : https://school.programmers.co.kr/learn/courses/30/lessons/12947
+정수 내림차순으로 배치하기 : https://school.programmers.co.kr/learn/courses/30/lessons/12933
+문자열을 정수로 바꾸기 : https://school.programmers.co.kr/learn/courses/30/lessons/12925
+
+팀장급
+124 나라의 숫자 : https://school.programmers.co.kr/learn/courses/30/lessons/12899
+크레인 인형뽑기 게임 : https://school.programmers.co.kr/learn/courses/30/lessons/64061
