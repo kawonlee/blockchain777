@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: "Sawarabi Gothic", sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.main {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  position: relative;
+}
+
+.main-en {
+  display: none;
+  height: 100vh;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+#menuButton {
+  cursor: pointer;
+  display: flex;
+  background-color: transparent;
+  /* 백그라운드 투명하게 하는거 */
+  border: none;
+  align-items: center;
+}
+.menuImg {
+  width: 25px;
+  margin-left: 20px;
+}
+
+.mainLogo {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 0.3rem;
+  display: flex;
+}
+
+.loginImg {
+  width: 30px;
+  display: flex;
+  margin-right: 20px;
+  border-radius: 15px;
+}
+#mvBox {
+  height: 700vh;
+  width: 100%;
+  position: fixed;
+  transition: transform 1s;
+}
+
+.mv1 {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.mv2 {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.mv3 {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+.mv4 {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+.mv5 {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+.mv6 {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+.mv7 {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.btnBox {
+  position: fixed;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  right: 1rem;
+  flex-direction: column;
+  width: 2px;
+}
+
+#sidebtn1 {
+  cursor: pointer;
+  height: 60px;
+  border: none;
+  margin-bottom: 5px;
+  background-color: white;
+}
+#sidebtn2 {
+  cursor: pointer;
+  height: 60px;
+  border: none;
+  margin-bottom: 5px;
+  background-color: gray;
+}
+#sidebtn3 {
+  cursor: pointer;
+  height: 60px;
+  border: none;
+  margin-bottom: 5px;
+  background-color: gray;
+}
+#sidebtn4 {
+  cursor: pointer;
+  height: 60px;
+  border: none;
+  margin-bottom: 5px;
+  background-color: gray;
+}
+#sidebtn5 {
+  cursor: pointer;
+  height: 60px;
+  border: none;
+  background-color: gray;
+  margin-bottom: 5px;
+}
+#sidebtn6 {
+  cursor: pointer;
+  height: 60px;
+  border: none;
+  background-color: gray;
+  margin-bottom: 5px;
+}
+#sidebtn7 {
+  cursor: pointer;
+  height: 60px;
+  border: none;
+  background-color: gray;
+  margin-bottom: 5px;
+}
+
+ul li {
+  float: left;
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+.footer {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  bottom: 0.6rem;
+}
+.List1 {
+  margin-right: 30px;
+  font-weight: bold;
+  padding: 0;
+}
+.List1 * {
+  color: white;
+}
+
+.List2 {
+  padding: 0;
+  margin-left: 12px;
+}
+
+.List2 * {
+  text-decoration: none;
+  color: white;
+  padding: 0;
+}
+.footerList {
+  text-decoration: none;
+}
+
+.socialLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  bottom: 4rem;
+}
+.socialImg {
+  width: 46px;
+  height: 46px;
+  margin: 0 10px;
+}
+
+#lang-select {
+  /* appearance: none; */
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+
+.lang {
+  color: black;
+  font-size: 11px;
+  text-align: left;
+}
+
+.en {
+  display: none;
+}

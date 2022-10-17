@@ -1,0 +1,118 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>버튼테스트</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        overflow: hidden;
+        margin: 0;
+      }
+      .main {
+        overflow: hidden;
+        height: 100vh;
+        position: relative;
+      }
+      #container {
+        height: 200vh;
+        position: fixed;
+        transition: transform 0.8s;
+      }
+      #inner1 {
+        object-fit: cover;
+        height: 100vh;
+        z-index: -1;
+      }
+      #inner2 {
+        object-fit: cover;
+        height: 99vh;
+        z-index: -1;
+      }
+      .btnBox {
+        position: fixed;
+        display: flex;
+        bottom: 30rem;
+        right: 1rem;
+        flex-direction: column;
+        width: 2px;
+      }
+      #btn1 {
+        cursor: pointer;
+        height: 50px;
+        border: none;
+        margin-bottom: 5px;
+      }
+      #btn2 {
+        cursor: pointer;
+        height: 50px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div id="container">
+        <div id="inner1">
+          <video autoplay loop mute src="./aespa 에스파 'Girls' MV.mp4"></video>
+        </div>
+        <div id="inner2">
+          <video
+            autoplay
+            loop
+            mute
+            src="./[STATION] aespa 에스파 'Dreams Come True' MV - YouTube - Chrome 2022-10-07 10-29-38_Trim.mp4"
+          ></video>
+        </div>
+      </div>
+    </div>
+    <div class="btnBox">
+      <button id="btn1"></button>
+      <button id="btn2"></button>
+    </div>
+    <script>
+      document.getElementById("btn2").addEventListener("click", function () {
+        document.getElementById("container").style.transform =
+          "translateY(-100vh)";
+        document.getElementById("btn2").style.backgroundColor = "red";
+      });
+      document.getElementById("btn1").addEventListener("click", function () {
+        document.getElementById("container").style.transform =
+          "translateY(0vh)";
+        document.getElementById("btn1").style.backgroundColor = "red";
+      });
+
+      window.addEventListener("wheel", (e) => {
+        if (e.deltaY > 1) {
+          document.getElementById("container").style.transform =
+            "translateY(-100vh)";
+        } else if (e.deltaY < 1) {
+          document.getElementById("container").style.transform =
+            "translateY(0vh)";
+        }
+      });
+
+      // document.addEventListener("wheel", (e) => {
+      //   console.log(e);
+      // });
+      document.addEventListener("mousewheel", mouseWheeling, false);
+      function mouseWheeling(e) {
+        let scrollDirection;
+        let wheelData = e.wheelDelta;
+
+        if (wheelData) {
+          scrollDirection = wheelData;
+        } else {
+          scrollDirection = -1 * e.detail;
+        }
+
+        if (scrollDirection > 0) {
+          console.log("Scrolling up! " + scrollDirection);
+        } else {
+          console.log("Scrolling down! " + scrollDirection);
+        }
+      }
+    </script>
+  </body>
+</html>

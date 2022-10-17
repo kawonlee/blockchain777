@@ -1,0 +1,69 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KO_ENG_EXCHANGE</title>
+  </head>
+  <body>
+    <select name="LANGUAGES" id="selectLanguage">
+      <option value="ko" selected>KOREAN</option>
+      <option value="eng">ENGLISH</option>
+    </select>
+    <div>
+      <span class="ko" style="display: block">한글말싸미듕국어는싫어1</span>
+      <span class="eng" style="display: block">I hate English Also1</span>
+      <span class="ko" style="display: block">한글말싸미듕국어는싫어2</span>
+      <span class="eng" style="display: block">I hate English Also2</span>
+      <span class="ko" style="display: block">한글말싸미듕국어는싫어3</span>
+      <span class="eng" style="display: block">I hate English Also3</span>
+      <span class="ko" style="display: block">한글말싸미듕국어는싫어4</span>
+      <span class="eng" style="display: block">I hate English Also4</span>
+    </div>
+
+    <script>
+      const koreans = document.getElementsByClassName("ko");
+      const englishes = document.getElementsByClassName("eng");
+      const languages = [];
+
+      languages.push(koreans, englishes);
+
+      // languages = [koreans, englishes]
+      // 특정 string을 매개변수로 입력하면 해당 문자열에 일치하는 className을 가진 element 만 보이게 하는 함수
+      function viewLanguage(languageName) {
+        // 언어에 따라 순회할 거임
+        for (let i = 0; i < languages.length; ++i) {
+          // i번째 언어에 해당하는 모든 element들의 개수 미리 받음
+          const len = languages[i].length;
+          // element.style.display에 넣을 스트링을 미리 지정함
+          let str = "none";
+
+          // i번째 언어 클래스를 가진 Element 들을 순회함.
+          for (let j = 0; j < len; ++j) {
+            // 순회하면서 만약 위에 지정된 언어에 해당하는 클래스가 없다면
+            if (languages[i][j].classList.contains(languageName)) {
+              // 원하는 언어 클래스를 가진 녀석만 block
+              str = "block";
+            }
+            // 위에서 block으로 바뀌었다면  str = block 나머지는 none으로 들어감
+            languages[i][j].style.display = str;
+          }
+        }
+      }
+      /*===============여기까지가 보이고 안보이고 함수====================*/
+      /*===============앞으로는 값이 바뀌었을 때 위 함수 실행==============*/
+      // select 태그 가진 녀석
+      const languageSelector = document.getElementById("selectLanguage");
+
+      // 이런식으로  onchange 가능
+      languageSelector.onchange = function (e) {
+        // 언어 바꿀때 콘솔 한번씩 찍어줌
+        // 여기선 e.target.value에 ko랑 eng가 저장되어있었음
+        console.log("changed : " + e.target.value);
+        viewLanguage(e.target.value);
+      };
+      //  위의 onchange는 처음상태에선 동작하지 않기 때문에 처음에만 viewLanguage실행해줌
+      viewLanguage("ko");
+    </script>
+  </body>
+</html>

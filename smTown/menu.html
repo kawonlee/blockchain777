@@ -1,0 +1,352 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메뉴바 테스트</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        font-family: "Sawarabi Gothic", sans-serif;
+      }
+      body {
+        display: flex;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translate3d(0, -100%, 0);
+        }
+        to {
+          opacity: 1;
+          transform: translateZ(0);
+        }
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 0;
+          transform: translate3d(0, 100%, -100%);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(-100vh);
+        }
+      }
+      .sideMenu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        animation: fadeInDown 1.2s;
+      }
+      .firstBar {
+        display: flex;
+        background-color: black;
+        align-items: center;
+      }
+      #backbtn {
+        background-color: transparent;
+        color: white;
+        font-size: 25px;
+        margin-right: 15px;
+        margin-left: 25px;
+        cursor: pointer;
+      }
+      .backbtnani {
+        animation: fadeOut 1.2s forwards;
+      }
+      .firstLine {
+        display: flex;
+      }
+      .firstBox {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        /* justify-content: space-around; */
+        padding: 0;
+      }
+
+      .item1 {
+        margin: 50px;
+      }
+
+      .item2 {
+        margin: 50px;
+      }
+
+      .item3 {
+        margin: 50px 30px;
+      }
+
+      .item4 {
+        margin: 50px auto;
+      }
+
+      .item5 {
+        margin-left: 50px;
+        margin-bottom: 30px;
+      }
+
+      .item6 {
+        margin-left: 48px;
+        margin-bottom: 30px;
+      }
+
+      .item7 {
+        margin: 0 78px;
+        margin-bottom: 30px;
+      }
+      .item7-1 {
+        margin: 53px 30px;
+      }
+
+      .item8 {
+        margin: 50px;
+      }
+      .titleName {
+        margin-bottom: 18px;
+      }
+
+      .subName {
+        margin-bottom: 8px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+      }
+      .secondLine {
+        display: flex;
+      }
+      .secondBox {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 0;
+      }
+
+      .thirdLine {
+        display: flex;
+      }
+
+      .thirdBox {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+      }
+
+      .listimg {
+        width: 25px;
+        height: 25px;
+        border-radius: 6px;
+        margin-right: 8px;
+      }
+
+      .sns1 {
+        display: flex;
+      }
+
+      .sns2 {
+        display: flex;
+      }
+
+      .item9 {
+        margin: 20px 0;
+        margin-left: 80px;
+      }
+
+      .item10 {
+        margin: 20px 0;
+        margin-left: 35px;
+      }
+
+      .item11 {
+        margin: 20px 0;
+        margin-left: 200px;
+      }
+
+      .item12 {
+        margin-bottom: 70px;
+        margin-left: 80px;
+      }
+      .item13 {
+        margin-bottom: 70px;
+        margin-left: 193px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sideMenu">
+      <div class="firstBar">
+        <button id="backbtn">X</button>
+        <span
+          style="
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 0.3rem;
+            height: 44px;
+            padding: 6px 0;
+          "
+          >SMTOWN</span
+        >
+      </div>
+      <div class="firstLine">
+        <ul type="none" class="firstBox">
+          <div class="item1">
+            <h2 class="titleName">ARTIST</h2>
+            <li class="subName">MUSICIAN</li>
+            <li class="subName">ACTOR</li>
+            <li class="subName">ENTERTAINER</li>
+            <li class="subName">MODEL</li>
+            <li class="subName">ATHLETE</li>
+          </div>
+          <div class="item2">
+            <h2 class="titleName">PRODUCTION</h2>
+            <li class="subName">ALBUM</li>
+            <li class="subName">MUSIC VIDEO</li>
+            <li class="subName">SM STATION</li>
+            <li class="subName">SM CLASSICS</li>
+            <li class="subName">iSCreaM</li>
+            <li class="subName">REMASTERING</li>
+            <li class="subName">MOVIE & DRAMA</li>
+            <li class="subName">VARIETY SHOW</li>
+          </div>
+          <div class="item3">
+            <h2 class="titleName">SERIES</h2>
+            <li class="subName">SERIES</li>
+          </div>
+          <div class="item4">
+            <h2 class="titleName">AUDITION</h2>
+            <li class="subName">AUDITION</li>
+          </div>
+        </ul>
+      </div>
+      <div class="secondLine">
+        <ul type="none" class="secondBox">
+          <div class="item5">
+            <h2 class="titleName">COMMUNITY</h2>
+            <li class="subName">
+              <img
+                class="listimg"
+                src="./메뉴/광야클럽.png"
+                alt="광야"
+              />KWANGYA CLUB
+            </li>
+          </div>
+          <div class="item6">
+            <h2 class="titleName">SHOPPING</h2>
+            <li class="subName">
+              <img
+                class="listimg"
+                src="./메뉴/에스엠타운&스토어.png"
+                alt=""
+              />SMTOWN & STORE
+            </li>
+            <li class="subName">
+              <img class="listimg" src="./메뉴/에스엠글로벌.png" alt="" />
+              Global Shop
+            </li>
+            <li class="subName">
+              <img
+                class="listimg"
+                src="./메뉴/셀러브랜드.png"
+                alt=""
+              />CELEBRAND
+            </li>
+            <li class="subName">
+              <img class="listimg" src="./메뉴/글로벌패키지.png" alt="" />SM
+              GLOBAL PACKAGE
+            </li>
+          </div>
+          <div class="item7">
+            <h2 class="titleName">SERVICE</h2>
+            <li class="subName">
+              <img class="listimg" src="./메뉴/비욘드.png" alt="" />Beyond LIVE
+            </li>
+            <li class="subName">
+              <img class="listimg" src="./메뉴/에스엠에이알.png" alt="" />SMTOWN
+              AR
+            </li>
+            <li class="subName">
+              <img class="listimg" src="./메뉴/에브리씽.png" alt="" />everysing
+            </li>
+            <li class="subName">
+              <img class="listimg" src="./메뉴/슈퍼스타.png" alt="" />SuperStar
+              SMTOWN
+            </li>
+          </div>
+          <div class="item7-1">
+            <li class="subName">
+              <img class="listimg" src="./메뉴/ww.png" alt="" />Wyth
+            </li>
+            <li class="subName">
+              <img class="listimg" src="./메뉴/팬북.png" alt="" />Fanbook
+            </li>
+            <li class="subName">
+              <img class="listimg" src="./메뉴/플로.png" alt="" />FLO
+            </li>
+            <li class="subName">
+              <img class="listimg" src="./메뉴/유니버스.png" alt="" />SM
+              Universe
+            </li>
+          </div>
+        </ul>
+      </div>
+      <hr style="width: 95%; margin: auto" />
+      <div class="thirdLine">
+        <div class="item8">
+          <h2>SNS</h2>
+        </div>
+        <ul type="none" class="thirdBox">
+          <div class="sns1">
+            <div class="item9">
+              <li class="subName">SMTOWN</li>
+              <img class="listimg" src="./메뉴/메뉴페북.png" alt="" />
+              <img class="listimg" src="./메뉴/메뉴트위터.png" alt="" />
+              <img class="listimg" src="./메뉴/메뉴유튜브.png" alt="" />
+              <img class="listimg" src="./메뉴/메뉴인스타.png" alt="" />
+              <img class="listimg" src="./메뉴/메뉴틱톡.png" alt="" />
+              <img class="listimg" src="./메뉴/메뉴웨이보.png" alt="" />
+            </div>
+            <div class="item10">
+              <li class="subName">PinkBlood</li>
+              <img class="listimg" src="./메뉴/메뉴인스타.png" alt="" />
+              <img class="listimg" src="./메뉴/메뉴틱톡.png" alt="" />
+            </div>
+            <div class="item11">
+              <li class="subName">SMile</li>
+              <img class="listimg" src="./메뉴/메뉴페북.png" alt="" />
+            </div>
+          </div>
+          <div class="sns2">
+            <div class="item12">
+              <li class="subName">AUDITION</li>
+              <img class="listimg" src="./메뉴/메뉴인스타.png" alt="" />
+            </div>
+            <div class="item13">
+              <li class="subName">SMROOKIES</li>
+              <img class="listimg" src="./메뉴/메뉴페북.png" alt="" />
+              <img class="listimg" src="./메뉴/메뉴트위터.png" alt="" />
+              <img class="listimg" src="./메뉴/메뉴인스타.png" alt="" />
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <script>
+      document.getElementById("backbtn").addEventListener("click", function () {
+        document
+          .getElementsByClassName("sideMenu")
+          .item(0)
+          .classList.toggle("backbtnani");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .en {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="footer">
+      <ul type="none" class="List2">
+        <li class="footerList">
+          <span class="ko"
+            ><a href="https://www.smentertainment.com/" target="_blank"
+              >회사소개</a
+            ></span
+          ><span class="en"
+            ><a href="https://www.smentertainment.com/" target="_blank"
+              >About us</a
+            ></span
+          >
+        </li>
+        <li class="footerList">
+          <span class="ko"
+            ><a href="https://recruit.smentertainment.com/" target="_blank"
+              >채용정보</a
+            ></span
+          ><span class="en"
+            ><a href="https://recruit.smentertainment.com/" target="_blank"
+              >Recruitment Information</a
+            ></span
+          >
+        </li>
+        <li class="footerList">
+          <span class="ko"
+            ><a href="https://www.smtown.com/notice">공지사항</a></span
+          >
+          <span class="en"
+            ><a href="https://www.smtown.com/notice">Announcement</a></span
+          >
+        </li>
+
+        <li class="footerList">
+          <span class="ko"
+            ><a href="https://www.smtown.com/policy/terms">이용약관</a></span
+          ><span class="en"
+            ><a href="https://www.smtown.com/policy/terms"
+              >Terms and Conditions</a
+            ></span
+          >
+        </li>
+        <li class="footerList">
+          <span class="ko"
+            ><a href="https://www.smtown.com/policy/privacy"
+              >개인정보처리방침</a
+            ></span
+          ><span class="en"
+            ><a href="https://www.smtown.com/policy/privacy"
+              >Privacy Policy</a
+            ></span
+          >
+        </li>
+      </ul>
+      <ul class="List1" type="none">
+        <li>Family SITE</li>
+        <li>
+          <select id="lang-select" onchange="changeLangSelect()">
+            <option class="lang" value="ko">한국어</option>
+            <option class="lang" value="en">ENGLISH</option>
+          </select>
+        </li>
+        <li>ⓒ SM ENTERTAINMENT</li>
+      </ul>
+    </div>
+    <script>
+      function changeLangSelect() {
+        let langSelect = document.getElementById("lang-select");
+        let key = langSelect.value;
+        console.log(key);
+        langSelect.addEventListener("click", function () {
+          if (key == "ko") {
+            for (
+              let i = 0;
+              i < document.getElementsByClassName("en").length;
+              i++
+            ) {
+              let langEn = document.getElementsByClassName("en").item(i);
+              langEn.style.display = "none";
+              let langKo = document.getElementsByClassName("ko").item(i);
+              langKo.style.display = "block";
+            }
+          } else if (key == "en") {
+            for (
+              let i = 0;
+              i < document.getElementsByClassName("ko").length;
+              i++
+            ) {
+              let langKo = document.getElementsByClassName("ko").item(i);
+              langKo.style.display = "none";
+              let langEn = document.getElementsByClassName("en").item(i);
+              langEn.style.display = "block";
+            }
+          }
+        });
+        // select element에서 선택된 option의 value가 저장된다.
+        // let selectValue = langSelect.options[langSelect.selectedIndex].value;
+        // console.log(selectValue);
+        // select element에서 선택된 option의 text가 저장된다.
+        // let selectText = langSelect.options[langSelect.selectedIndex].text;
+        // console.log(selectText);
+      }
+    </script>
+  </body>
+</html>
+// if (key == "ko") { // document.getElementById("en1").style.display = "none";
+// document.getElementById("ko1").style.display = "block"; // } else if (key ==
+"en") { // document.getElementById("ko1").style.display = "none"; //
+document.getElementById("en1").style.display = "block"; // }
