@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+#main-title {
+  margin: 20px auto;
+  text-align: center;
+  animation: nameani 6s infinite;
+}
+@keyframes nameani {
+  10% {
+    color: pink;
+  }
+  25% {
+    color: aqua;
+  }
+  40% {
+    color: blueviolet;
+  }
+  55% {
+    color: chartreuse;
+  }
+  70% {
+    color: darkslateblue;
+  }
+  85% {
+    color: deeppink;
+  }
+  100% {
+    color: midnightblue;
+  }
+}
+.rsp {
+  display: flex;
+  width: 550px;
+  height: 567px;
+  flex-direction: column;
+  margin: auto;
+  background-color: cornflowerblue;
+}
+
+/* div {
+  display: flex;
+} */
+
+.button-line {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+#start-button {
+  background-color: crimson;
+  border: 4px solid black;
+  border-radius: 50px;
+  width: 80px;
+  height: 80px;
+  color: white;
+  /* font-size: 25px; */
+  font-weight: bold;
+}
+
+#start-button:active {
+  background-color: crimson;
+  border: 10px solid black;
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 3px 3px 3px black;
+}
+
+.choice {
+  background-color: dodgerblue;
+  border: 4px solid black;
+  border-radius: 50px;
+  width: 80px;
+  height: 80px;
+  color: white;
+  font-weight: bold;
+}
+
+.choice:active {
+  background-color: dodgerblue;
+  border: 10px solid black;
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+}
+
+#computer-line {
+  display: flex;
+  background-image: url(./흰둥쓰.jpg);
+  background-size: 166px;
+  width: 500px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+#computer-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 30px;
+  /* position: absolute; */
+}
+
+.winner {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#win {
+  background-color: gray;
+  border: none;
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes winmotion {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: gray;
+  }
+}
+
+.winmo {
+  animation-duration: 4s;
+  animation-name: winmotion;
+}
+
+#draw {
+  background-color: gray;
+  border: none;
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes drawmotion {
+  from {
+    background-color: blueviolet;
+  }
+  to {
+    background-color: gray;
+  }
+}
+
+.drawmo {
+  animation-duration: 4s;
+  animation-name: drawmotion;
+}
+
+#defeat {
+  background-color: gray;
+  border: none;
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes defeatmotion {
+  from {
+    background-color: blue;
+  }
+  to {
+    background-color: gray;
+  }
+}
+
+.defeatmo {
+  animation-duration: 4s;
+  animation-name: defeatmotion;
+}
+
+.coin-line {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+@keyframes coinmotion {
+  0% {
+    background-color: red;
+  }
+  15% {
+    background-color: blueviolet;
+  }
+  30% {
+    background-color: blue;
+  }
+
+  50% {
+    background-color: darkcyan;
+  }
+  75% {
+    background-color: lime;
+  }
+  100% {
+    background-color: gold;
+  }
+}
+
+@keyframes coinmotion2 {
+  0% {
+    background-color: blue;
+  }
+  15% {
+    background-color: dodgerblue;
+  }
+  30% {
+    background-color: red;
+  }
+
+  50% {
+    background-color: slateblue;
+  }
+  75% {
+    background-color: darkorange;
+  }
+  100% {
+    background-color: gold;
+  }
+}
+
+.coinmo:nth-child(2n + 1) {
+  animation-name: coinmotion;
+  animation-duration: 2s;
+}
+
+.coinmo:nth-child(2n) {
+  animation-name: coinmotion2;
+  animation-duration: 2s;
+}
+
+.coin-box {
+  margin: 1px;
+  width: 32px;
+  height: 35px;
+  background-color: gold;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playmoney {
+  display: flex;
+  margin-top: 20px;
+}
+
+.coin-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+#coin {
+  width: 450px;
+  align-items: center;
+  /* background-image: url(./돈돈.webp); */
+  /* background-position: bottom; */
+  display: flex;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 20px;
+}

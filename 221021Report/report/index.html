@@ -1,0 +1,33 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <div>
+        <p id="login-ing"></p>
+        <form id="member-join">
+          <div class="member-box">
+            <label for="member-id"
+              >ID : <input type="text" id="member-id" />
+            </label>
+            <label for="member-pw"
+              >PASSWORD : <input type="password" id="member-pw" />
+            </label>
+          </div>
+          <br />
+          <button>회원가입</button>
+        </form>
+        <button id="login-btn">로그인</button>
+        <button id="logout-btn">로그아웃</button>
+      </div>
+      <div><p id="action"></p></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

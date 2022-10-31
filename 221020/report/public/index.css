@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.main {
+  width: 90%;
+  margin: auto;
+  border: 3px solid palevioletred;
+}
+
+h1 {
+  color: deeppink;
+  text-align: center;
+}
+
+label {
+  margin-left: 20px;
+}
+
+textarea {
+  resize: none;
+  margin-top: 15px;
+}
+
+#head {
+  width: 200px;
+}
+
+#post {
+  margin-left: 20px;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+#submit {
+  margin-left: 20px;
+  margin-top: 10px;
+}

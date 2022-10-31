@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+}
+
+.login-box {
+  background-color: deepskyblue;
+  width: 500px;
+}
+
+#login-info {
+  background-color: deepskyblue;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.login-text {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 5px;
+}
+
+.login-text input {
+  margin-bottom: 10px;
+}
+#regist-text {
+  display: none;
+  flex-direction: column;
+  width: 200px;
+  margin: 5px;
+  margin-top: 0px;
+}
+
+#regist-text input {
+  margin-bottom: 10px;
+}
+
+#regist-text.on {
+  display: flex;
+}
+.btn-box {
+  display: flex;
+}
+#login-btn {
+  width: 100px;
+  margin: 5px;
+}
+#logout-btn {
+  margin: 5px;
+  width: 100px;
+}
+#member {
+  margin: 5px;
+  width: 100px;
+}
+#login-ing {
+  display: none;
+  background-color: deepskyblue;
+  width: 500px;
+  padding: 10px;
+  margin: 0;
+}
+
+#login-ing.login {
+  display: block;
+}
+
+#login-btn.login {
+  display: none;
+}
+#login-btn {
+  display: block;
+}
+
+#logout-btn {
+  display: none;
+}
+
+#logout-btn.login {
+  display: block;
+}
+
+#board-main {
+  display: none;
+  margin: 10px;
+  width: 280px;
+  background-color: cadetblue;
+}
+
+#board-main.login {
+  display: block;
+}
+
+#board-add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#board-add label {
+  margin: 10px;
+}
+
+#upload-btn {
+  width: 70px;
+}
+
+/* 게시판 목록 */
+#board {
+  display: none;
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  padding: 20px 50px;
+}
+
+#board.login {
+  display: block;
+}
+
+#list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#list li {
+  border: 1px solid black;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#list li div * {
+  pointer-events: none;
+}
+
+#list li .title {
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  background-color: cadetblue;
+}
+
+#list li .title h3 {
+  flex: 1;
+}
+
+#list li .title img {
+  width: 30px;
+  transform: scaleY(-1);
+  transition: transform 0.5s ease-in-out;
+}
+
+#list li .title img.on {
+  transform: scaleY(1);
+}
+
+#list li .text {
+  width: 100%;
+  padding: 10px 30px;
+  margin: 0;
+  transition: padding 0.5s ease-in-out;
+  display: flex;
+}
+
+#list li .text p {
+  flex: 1;
+  font-size: 0;
+  /* transition: font-size 0.2s ease-in-out; */
+}
+#list li .text.on {
+  padding: 10px 30px 20px;
+}
+
+#list li .text.on p {
+  font-size: 1rem;
+}
+
+#list li .text textarea {
+  display: none;
+  resize: none;
+  width: 100%;
+  height: 200px;
+  pointer-events: auto;
+  flex: 1;
+}
+
+#list li .text.edit p {
+  display: none;
+}
+
+#list li .text.on.edit textarea {
+  display: block;
+}
+
+#list li .text .list-btn-box {
+  display: none;
+}
+
+#list li .text .list-btn-box button {
+  width: 50px;
+  margin-left: 10px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+#list li .text.on .list-btn-box {
+  display: flex;
+  align-items: center;
+}
+
+#list li .text.on .cancel {
+  display: none;
+}
+
+#list li .text.on.edit .delete {
+  display: none;
+}
+
+#list li .text.on.edit .cancel {
+  display: block;
+}
+
+#page {
+  list-style: none;
+  margin: auto;
+  display: flex;
+  margin-top: 20px;
+  width: fit-content;
+}
+
+#page li {
+  margin: 0 10px;
+  padding: 3px 5px;
+  cursor: pointer;
+}
+
+#page li.now {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}

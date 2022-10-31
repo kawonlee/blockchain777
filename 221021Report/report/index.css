@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 이런 하위 자식 정의가 헷갈리면 마우스를 올려보아라 */
+form > div.member-box {
+  display: block;
+}
+
+form > div {
+  display: none;
+}
+
+#login-btn {
+  display: block;
+}
+#logout-btn {
+  display: none;
+}
+
+#login-btn.login {
+  display: none;
+}
+
+#logout-btn.login {
+  display: block;
+}
+
+#login-ing {
+  display: none;
+}
+
+#login-ing.login {
+  display: block;
+}

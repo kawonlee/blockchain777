@@ -1,0 +1,39 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <h1>블록 7기 게시판</h1>
+      <form id="write">
+        <label for="post">
+          제목 :
+          <input
+            type="text"
+            id="head"
+            name="head"
+            placeholder="제목을 입력해주세요."
+          />
+        </label>
+        <div style="margin-top: 15px; margin-left: 20px">게시글 작성</div>
+        <div>
+          <textarea
+            name="post"
+            id="post"
+            cols="70"
+            rows="20"
+            placeholder="내용을 입력해주세요."
+          ></textarea>
+        </div>
+      </form>
+      <button id="submit">등록</button>
+      <ul id="list" type="none"></ul>
+      <script src="index.js"></script>
+    </div>
+  </body>
+</html>

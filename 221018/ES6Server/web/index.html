@@ -1,0 +1,77 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>테슷트</title>
+    <style>
+      @keyframes jjang {
+        0% {
+          color: red;
+        }
+        25% {
+          color: blue;
+        }
+        50% {
+          color: aqua;
+        }
+        75% {
+          color: cornflowerblue;
+        }
+        100% {
+          color: gold;
+        }
+      }
+
+      .text {
+        text-align: center;
+        animation: jjang 3s infinite;
+      }
+      @keyframes backg {
+        0% {
+          background-color: white;
+        }
+        50% {
+          background-color: black;
+        }
+        100% {
+          background-color: white;
+        }
+      }
+      .back {
+        animation: backg 3s infinite;
+      }
+
+      @keyframes change {
+        0% {
+          text-align: left;
+        }
+        30% {
+          text-align: center;
+        }
+        50% {
+          text-align: right;
+        }
+        75% {
+          text-align: center;
+        }
+        100% {
+          text-align: left;
+        }
+      }
+      .gugu {
+        animation: change 3s infinite;
+      }
+    </style>
+  </head>
+  <body class="back">
+    <h1 class="text">뭔소린지 하나도 모르게따...</h1>
+    <br />
+    <div class="gugu" style="text-align: center">
+      <img
+        src="https://www.newsquest.co.kr/news/photo/202205/96478_80014_5020.jpeg"
+        alt=""
+      />
+    </div>
+  </body>
+</html>
