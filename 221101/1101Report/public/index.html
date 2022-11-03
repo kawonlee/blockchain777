@@ -1,0 +1,78 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live chat</title>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <div id="login-box" style="margin-bottom: 20px">
+      <input type="text" id="login-text" />
+      <button id="login">로그인</button>
+      <button id="logout" style="display: none">로그아웃</button>
+    </div>
+    <div>
+      <input type="text" id="chat" /> <button id="send-msg">전송</button>
+    </div>
+    <ul type="none" id="chatting-line"></ul>
+    <script>
+      const loginBox = document.getElementById("login-box");
+      const loginBtn = document.getElementById("login");
+      const logoutBtn = document.getElementById("logout");
+      const login = document.getElementById("login-text");
+      const chat = document.getElementById("chat");
+      const sendBtn = document.getElementById("send-msg");
+      const chattingLine = document.getElementById("chatting-line");
+      const loginView = document.createElement("div");
+      function socket() {
+        const socket = io();
+
+        loginBtn.onclick = () => {
+          login.style.display = "none";
+          loginBtn.style.display = "none";
+          logoutBtn.style.display = "inline";
+          loginBox.prepend(loginView);
+          loginView.style.display = "inline";
+          loginView.innerText = login.value + "님 어서오세요~";
+          const chatText = document.createElement("li");
+          chattingLine.append(chatText);
+          chatText.innerText = login.value + "님이 입장하셨습니다.";
+          socket.emit("hi", login.value);
+        };
+        socket.on("hi", (data) => {
+          const chatText = document.createElement("li");
+          chatText.innerText = data + "님이 입장하셨습니다.";
+          chattingLine.append(chatText);
+        });
+
+        logoutBtn.onclick = () => {
+          login.style.display = "inline";
+          loginBtn.style.display = "inline";
+          logoutBtn.style.display = "none";
+          loginView.remove();
+          socket.emit("bye", login.value);
+          login.value = "";
+        };
+        socket.on("bye", (data) => {
+          const chatText = document.createElement("li");
+          chatText.innerText = data + "님이 퇴장하셨습니다.";
+          chattingLine.append(chatText);
+        });
+        sendBtn.onclick = () => {
+          let chatting = `${login.value}: ${chat.value}`;
+          socket.emit("chatting", chatting);
+          console.log(chat.value);
+          chat.value = "";
+        };
+        socket.on("chatting", (data) => {
+          const chatText = document.createElement("li");
+          chatText.innerText = data;
+          chattingLine.append(chatText);
+        });
+      }
+
+      socket();
+    </script>
+  </body>
+</html>
