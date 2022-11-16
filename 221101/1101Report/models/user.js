@@ -1,14 +1,19 @@
 const Sequelize = require("sequelize");
 
-module.exports = class Chat extends Sequelize.Model {
+module.exports = class User extends Sequelize.Model {
   static init(sequelize) {
     return super.init(
       {
         userId: {
-          type: Sequelize.STRING(20),
+          type: Sequelize.STRING(50),
+          unique: true,
         },
-        test: {
-          type: Sequelize.TEXT,
+        pw: {
+          type: Sequelize.STRING(255),
+        },
+
+        nickname: {
+          type: Sequelize.STRING(50),
         },
       },
       {
@@ -16,17 +21,18 @@ module.exports = class Chat extends Sequelize.Model {
         timestamps: true,
         paranoid: true,
         underscored: true,
-        modelName: "Chat",
-        tableName: "chat",
+        modelName: "User",
+        tableName: "user",
         charset: "utf8mb4",
         collate: "utf8mb4_general_ci",
       }
     );
   }
   static associate(db) {
-    Chat.belongsTo(db.User, {
+    User.hasMany(db.Chat, {
       foreignKey: "user_id",
-      targetKey: "id",
+      sourceKey: "id",
+      as: "Chats",
     });
   }
 };
