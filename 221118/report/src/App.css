@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.top,
+.main {
+  width: fit-content;
+  /* margin: 0 auto; */
+}
+
+.page {
+  width: 60%;
+  margin: auto;
+}
+
+.top {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+}
+
+.lang-box {
+  display: flex;
+}
+.lang {
+  font-size: 10px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.main-logo img {
+  width: 138px;
+  height: 32px;
+  margin-top: 20px;
+}
