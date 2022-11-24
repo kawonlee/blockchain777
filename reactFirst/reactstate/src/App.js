@@ -15,6 +15,9 @@ function App() {
     // 고로 React에서 변수는 잠깐 저장해두는 값들을 쓰고 나머지는 state로 쓸 예정
     setCount2(count2 + 1);
     console.log("count work?", count, "state count2", count2);
+
+    // const three = 5 > 3 ? console.log("5ㄴ는3보다 커") : console.log("작아");
+    // thre?.item.id
   };
   return (
     <div className="App">

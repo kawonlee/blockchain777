@@ -1,7 +1,8 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header";
 import Second from "./components/Second";
+import BodyComp from "./components/BodyComp";
+import BodyInfo from "./components/BodyInfo";
 
 function App() {
   return (
@@ -13,7 +14,10 @@ function App() {
       <div className="second">
         <Second />
       </div>
-      <div className="main">git rebase efforthye</div>
+      <div className="main">
+        <BodyComp />
+        <BodyInfo />
+      </div>
     </div>
   );
 }
