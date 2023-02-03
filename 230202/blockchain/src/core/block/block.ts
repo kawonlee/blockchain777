@@ -1,6 +1,3 @@
-// const merkle = require("merkle");
-// const SHA256 = require("crypto-js").SHA256;
-// const hexToBinary = require("hex-to-binary");
 import merkle from "merkle";
 import { SHA256 } from "crypto-js";
 import hexToBinary from "hex-to-binary";
@@ -8,18 +5,17 @@ import hexToBinary from "hex-to-binary";
 class BlockHeader implements IBlockHeader {
   // implements는 interface를 기준으로 타입을 확인한다.
   // class의 프로퍼티의 타입을 선언해주는 것이 아닌 정상적으로 타입이 정의되었나 확인한다.
-
   version: string;
   merkleRoot: string;
   timestamp: number;
   height: number;
   difficulty: number;
   nonce: number;
+  ip: string = "192.168.0.140";
 
-  constructor(_data: Array<string>, _previousBlock?: IBlock) {
+  constructor(_data: Array<ITransaction>, _previousBlock?: IBlock) {
     this.version = "1.0.0";
-    const merkleRoot: TError<string> | TResult<string> =
-      this.createMerkleRoot(_data);
+    const merkleRoot: TResult<string, string> = this.createMerkleRoot(_data);
     if (merkleRoot.isError === true) {
       // 확실하게 확인하면 msg 또는 value를 구분할 수 있다.
       this.merkleRoot = "";
@@ -35,15 +31,20 @@ class BlockHeader implements IBlockHeader {
   }
 
   setTimestamp(): void {
-    // return이 없기때문에 void
+    // return 없으므로 void
     this.timestamp = Date.now();
   }
 
-  createMerkleRoot(_data: Array<string>): TError<string> | TResult<string> {
+  createMerkleRoot(_data: Array<ITransaction>): TResult<string, string> {
     if (!Array.isArray(_data) || !_data.length) {
       return { isError: true, msg: "data가 배열이 아니거나 빈 배열" };
     }
-    return { isError: false, value: merkle("sha256").sync(_data).root() };
+    return {
+      isError: false,
+      value: merkle("sha256")
+        .sync(_data.map((item) => item.hash))
+        .root(),
+    };
   }
 
   getDifficulty({
@@ -84,10 +85,10 @@ class BlockHeader implements IBlockHeader {
 class Block extends BlockHeader implements IBlock {
   previousHash: string;
   hash: string;
-  data: Array<string>;
+  data: Array<ITransaction>;
 
   constructor(
-    _data: Array<string>,
+    _data: Array<ITransaction>,
     _previousBlock?: IBlock,
     _adjustmentBlock?: IBlock,
     _config?: IConfig
@@ -95,7 +96,6 @@ class Block extends BlockHeader implements IBlock {
   ) {
     super(_data, _previousBlock);
     this.previousHash = _previousBlock ? _previousBlock.hash : "0".repeat(64);
-
     if (this.merkleRoot) {
       if (_adjustmentBlock && _config) {
         this.getDifficulty({
@@ -139,7 +139,13 @@ class Block extends BlockHeader implements IBlock {
     return SHA256(tempStr).toString().toUpperCase();
   }
 
-  updateBlock(difficultyOptions: { [keys: string]: number }): void {
+  updateBlock(difficultyOptions: {
+    previousDifficulty: number;
+    adjustmentDifficulty: number;
+    adjustmentTimestamp: number;
+    DAI: number;
+    averageGenerationTime: number;
+  }): void {
     let hashBinary = hexToBinary(this.hash);
     while (!hashBinary.startsWith("0".repeat(this.difficulty))) {
       this.nonce += 1;
@@ -148,14 +154,14 @@ class Block extends BlockHeader implements IBlock {
       this.hash = Block.createHash(this);
       hashBinary = hexToBinary(this.hash);
     }
-    // console.log(hashBinary);
-    // console.log(hashBinary.slice(0, this.difficulty));
+    console.log(hashBinary);
+    console.log(hashBinary.slice(0, this.difficulty));
   }
 
   static isValidBlock(
     _newBlock: IBlock,
     _previousBlock: IBlock
-  ): TError<string> | TResult<IBlock> {
+  ): TResult<IBlock, string> {
     if (_newBlock.height !== _previousBlock.height + 1) {
       return { isError: true, msg: "높이가 다르다." };
     }
