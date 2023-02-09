@@ -26,6 +26,7 @@ geth --datadir ~/myGeth --http --http.addr "0.0.0.0" --http.port 8080 --http.cor
   - fast : block header, 최신 1024개의 트랜잭션 동기화, 설정 안했을 때 기본값 << 삭제됨
   - full : 모든 데이터 동기화
   - light : block header, 잔액 관련만 동기화
+  - snap: 최근 128개 블록만 동기화, 기본값
 
 ## geth에 HTTP 통신으로 연결
 
