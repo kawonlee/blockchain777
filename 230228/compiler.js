@@ -107,4 +107,7 @@ class Compiler {
   }
 }
 
+const a = { b: "c" };
+console.log(a.b, a["b"]);
+
 module.exports = Compiler;
