@@ -1,0 +1,15 @@
+{
+  "name": "KW NFT",
+  "description": "testing NFT with Pinata",
+  "image": "https://gateway.pinata.cloud/ipfs/QmWfMffL5WPmZH62TJygp4ozGHk6Vb7cXKrcjmQQnie4mL",
+  "attributes": [
+    {
+      "trait_type": "Rank",
+      "value": 1
+    },
+    {
+      "trait_type": "Type",
+      "value": 1
+    }
+  ]
+}
